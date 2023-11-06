@@ -1,0 +1,77 @@
+body {
+  background-color: black;
+  background-image: url(/src/assets/LatarBelakang.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: center;
+  font-family: "Poppins", sans-serif;
+}
+
+#title {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  position: relative;
+  padding-top: 10vh;
+  /* left: 54%; */
+  right: -48%;
+}
+
+#startBtn {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  position: fixed;
+  padding-top: 30%;
+  padding-left: 25%;
+  /* float: right; */
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  text-align: center;
+  left: 0;
+  top: 25%;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 15px;
+}
+
+#myModal {
+  display: none;
+}
+
+@media only screen and (orientation: portrait) {
+  #wrapper {
+    display: none;
+  }
+  #myModal {
+    display: block;
+  }
+}
+@media only screen and (orientation: landscape) {
+  #myModal {
+    display: none;
+  }
+}
