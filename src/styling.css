@@ -1,6 +1,6 @@
 body {
   background-color: black;
-  background-image: url(/src/assets/LatarBelakang.png);
+  background-image: url(./assets/LatarBelakang.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: contain;
