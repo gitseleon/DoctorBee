@@ -21,14 +21,11 @@ body {
 }
 
 #startBtn {
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  /* background-color: black; */
   position: fixed;
-  padding-top: 14%;
-  padding-left: 63.5%;
+  padding: 15% 63.5% 40%;
+  /* padding-top: 14%;
+  padding-left: 63.5%; */
   /* float: right; */
 }
 
