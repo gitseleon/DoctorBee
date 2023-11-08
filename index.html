@@ -3,7 +3,6 @@
   <head>
     <title>Doctor Bee Demo</title>
     <link rel="stylesheet" href="./src/styling.css" />
-    <link rel="manifest" href="manifest.json" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
@@ -12,8 +11,16 @@
   <body>
     <div id="container">
       <div id="wrapper">
-        <img id="title" src="./src/assets/title.svg" alt="Title" />
-        <img id="startBtn" src="./src/assets/startBtn.svg" alt="Start Button" />
+        <img id="title" src="./src/assets/title.png" alt="Title" />
+        <a href="./src/pages/pages.html"
+          ><img
+            id="startBtn"
+            src="./src/assets/startBtn.svg"
+            alt="Start Button"
+            onmousedown="startBtnClicked()"
+            onmouseup="startBtnRelease()"
+            onclick=""
+        /></a>
       </div>
       <!-- The Modal -->
       <div id="myModal" class="modal">
@@ -26,5 +33,14 @@
         </div>
       </div>
     </div>
+    <script>
+      function startBtnClicked() {
+        document.getElementById("startBtn").src =
+          "./src/assets/startBtnClick.svg";
+      }
+      function startBtnRelease() {
+        document.getElementById("startBtn").src = "./src/assets/startBtn.svg";
+      }
+    </script>
   </body>
 </html>
