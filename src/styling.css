@@ -1,49 +1,56 @@
 body {
-  background-color: black;
-  background-image: url(./assets/LatarBelakang.png);
+  background-image: url(./assets/LatarBelakang.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   font-family: "Poppins", sans-serif;
 }
 
-/* #text {
-  background-color: black;
-  width: 100%;
-  height: 30vh;
-  position: absolute;
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-#text2 {
-  background-color: black;
-  position: absolute;
-  width: 65vw;
-  height: 100vw;
-} */
+#wrapper {
+  /* background-color: slategray; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: flex-end;
+  width: 50vw;
+  height: 100vh;
+}
 
+#title {
+  /* background-color: salmon; */
+  width: 50vw;
+  height: 30vh;
+}
 
 #startBtn {
-  background-color: black;
-  position: relative;
-  top: 32vh;
-  left: 63vw;
+  width: 20vw;
+  height: 10vh;
+}
+
+#myModal {
+  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  /* padding-top: 100px; Location of the box */
+  /* position: fixed; */
+  /* z-index: 1; */
   text-align: center;
-  left: 0;
-  top: 45%;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  overflow: auto;
 }
 
 /* Modal Content */
@@ -56,20 +63,15 @@ body {
   border-radius: 15px;
 }
 
-#myModal {
-  display: none;
-}
-
-#wrapper {
-  position: relative;
-}
-
 @media only screen and (orientation: portrait) {
   #wrapper {
     display: none;
   }
   #myModal {
     display: block;
+  }
+  #container {
+    background-color: rgba(0, 0, 0, 0.6);
   }
 }
 @media only screen and (orientation: landscape) {

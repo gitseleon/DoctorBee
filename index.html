@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Doctor Bee</title>
+    <title>Doctor Bee Demo</title>
     <link rel="stylesheet" href="./src/styling.css" />
     <link rel="manifest" href="manifest.json" />
     <link
@@ -9,37 +9,22 @@
       rel="stylesheet"
     />
   </head>
-  <body style="background-image: url(./src/assets/cover.png)">
-    <div id="wrapper">
-      <!-- <div id="text"></div>
-      <div id="text2"></div> -->
-      <!-- <div id="startBtnContainer"> -->
-        <img id="startBtn" src="./src/assets/startBtn.png" alt="Start Button" />
-      <!-- </div> -->
-    </div>
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-      <!-- Modal content -->
-      <div class="modal-content">
-        <p>
-          Maksimalkan pengalaman mengeksplorasi newsgames "Manis Tak Seindah
-          Akhirnya" dengan memutar layar perangkat menjadi mode lanskap
-        </p>
+  <body>
+    <div id="container">
+      <div id="wrapper">
+        <img id="title" src="./src/assets/title.svg" alt="Title" />
+        <img id="startBtn" src="./src/assets/startBtn.svg" alt="Start Button" />
+      </div>
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <p>
+            Maksimalkan pengalaman mengeksplorasi newsgames "Manis Tak Seindah
+            Akhirnya" dengan memutar layar perangkat menjadi mode lanskap
+          </p>
+        </div>
       </div>
     </div>
-    <!-- <script>
-      // Detect Landscape or Portrait mode with JavaScript #
-      window
-        .matchMedia("(orientation: portrait)")
-        .addEventListener("change", (e) => {
-          const portrait = e.matches;
-
-          if (portrait) {
-            alert("You are in portrait");
-          } else {
-            alert("You are in landscape");
-          }
-        });
-    </script> -->
   </body>
 </html>
