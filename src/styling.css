@@ -1,3 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
 body {
   background-image: url(./assets/LatarBelakang.jpg);
   background-repeat: no-repeat;
@@ -5,6 +13,7 @@ body {
   background-size: cover;
   background-position: center;
   font-family: "Poppins", sans-serif;
+  overflow: hidden;
 }
 
 #container {
@@ -39,6 +48,10 @@ body {
 
 #startBtn:hover {
   animation: tilt 0.7s infinite;
+}
+
+.char {
+  width: 30vw;
 }
 
 @keyframes tilt {
