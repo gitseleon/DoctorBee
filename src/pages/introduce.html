@@ -9,7 +9,7 @@
     />
   </head>
 
-  <body style="">
+  <body>
     <div
       class="container"
       style="--fd: column; --jc: center; --ai: center; height: 100vh"
@@ -19,52 +19,74 @@
         class="container"
         style="--fd: row; --jc: center; --ai: flex-end; height: 100vh"
       >
-        <div class="container" style="--fd: column; --as: center">
-          <div class="talk-bubble tri-right round right-top">
+        <div class="container parent" style="--fd: column; --as: center">
+          <div
+            class="talk-bubble tri-right round right-top fade-in-right"
+            style="--dur: 2s; --delay: 2s"
+          >
             <div class="talktext">
               <p>
-                Now we add a border and it looks like a comic. Uses .border
-                .round and .btm-left-in
+                Selamat datang di newsgames “Manis Tak Seindah Akhirnya”!
               </p>
             </div>
           </div>
-          <div class="talk-bubble tri-right round right-top">
+          <div
+            class="talk-bubble tri-right round right-top fade-in-right"
+            style="--dur: 2s; --delay: 4s"
+          >
             <div class="talktext">
               <p>
-                Now we add a border and it looks like a comic. Uses .border
-                .round and .btm-left-in
+                Hai! Namaku Bee. Aku seorang dokter spesialis penyakit dalam dengan subspesialisasi endokrin - metabolik - diabetes. Kamu bisa panggil aku dokter Bee, ya. 
               </p>
             </div>
           </div>
         </div>
-        <a href="../../index.html"
-          ><img
-            src="../assets/char/hai.svg"
-            class="char"
-            alt="character"
-            style="align-self: center"
-        /></a>
+        <div
+          class="container slide-in-bottom"
+          style="--fd: column; --ai: center; --dur: 1s; --delay: 0s"
+        >
+          <h1>dr. Bee, Sp.PD-KEMD</h1>
+          <a href="../../index.html"
+            ><img
+              src="../assets/char/hai.svg"
+              class="char"
+              alt="character"
+              style="align-self: center"
+          /></a>
+        </div>
         <div class="container" style="--fd: column; --as: center">
-          <div class="talk-bubble tri-right round left-top">
+          <div
+            class="talk-bubble tri-right round left-top fade-in-left"
+            style="--dur: 2s; --delay: 5s"
+          >
             <div class="talktext">
               <p>
-                Now we add a border and it looks like a comic. Uses .border
-                .round and .btm-left-in
+                Aku di sini sebagai pemandu kamu sepanjang newsgames ini. Kalau kamu belum tahu, newsgames adalah berita dalam bentuk perangkat lunak yang dapat memuat tulisan, video, grafis, audio dengan skala interaktivitas yang tinggi.
               </p>
             </div>
           </div>
-          <div class="talk-bubble tri-right round left-top">
+          <div
+            class="talk-bubble tri-right round left-top fade-in-left"
+            style="--dur: 2s; --delay: 7s"
+          >
             <div class="talktext">
               <p>
-                Now we add a border and it looks like a comic. Uses .border
-                .round and .btm-left-in
+                Sekarang ini newsgames dianggap sebagai inovasi bentuk penyajian berita dalam dunia jurnalistik.
               </p>
             </div>
           </div>
         </div>
         <a
           href="../pages/bridging.html"
-          style="position: fixed; bottom: 1%; right: 1%; width: 12vw"
+          class="heartbeat"
+          style="
+            position: fixed;
+            bottom: 1%;
+            right: 1%;
+            width: 12vw;
+            --dur: 1.5s;
+            --delay: 10s;
+          "
           ><img src="../assets/ljtBtn.svg" alt="lanjut button"
         /></a>
       </div>
