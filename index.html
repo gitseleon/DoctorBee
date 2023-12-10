@@ -9,22 +9,44 @@
     />
   </head>
   <body oncontextmenu="return false">
-    <div id="container">
-      <div id="wrapper">
-        <img id="title" src="./src/assets/title.png" alt="Title" />
+    <div
+      class="container"
+      style="--fd: column; --jc: center; --ai: center; height: 100vh"
+    >
+      <div
+        class="container"
+        id="wrapper"
+        style="
+          --fd: column;
+          --jc: flex-start;
+          --ai: center;
+          --as: flex-end;
+          width: 50vw;
+          height: 100vh;
+        "
+      >
+        <img
+          style="width: 50vw; height: 30vh"
+          src="./src/assets/title.png"
+          alt="Title"
+        />
         <a href="./src/pages/introduce.html"
           ><img
             id="startBtn"
+            style="width: 20vw; height: 10vh"
             src="./src/assets/startBtn.svg"
             alt="Start Button"
-            onmousedown="startBtnClicked()"
-            onmouseup="startBtnRelease()"
-            onclick=""
+            onmouseenter="startBtnClicked()"
+            onmouseleave="startBtnRelease()"
         /></a>
       </div>
-      
+
       <!-- The Modal -->
-      <div id="myModal" class="modal">
+      <div
+        id="myModal"
+        class="container"
+        style="--jc: center; --ai: center; overflow: auto;background-color: rgba(0, 0, 0, 0)"
+      >
         <!-- Modal content -->
         <div class="modal-content">
           <p>

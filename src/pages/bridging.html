@@ -12,38 +12,52 @@
   </head>
   <body>
     <div
-      style="
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        height: 110vh;
-        background-color: rgba(0, 0, 0, 0.6);
-      "
+      class="container"
+      style="--fd: column; --jc: center; --ai: center; height: 100vh"
     >
-      <img
-        src="../assets/bubbleChat.svg"
-        style="align-self: center; width: 20vw"
-        alt="bubble chat"
-      />
-      <a href="../../index.html"
-        ><img src="../assets/char/hai.svg" class="char" alt="char introduce"
-      /></a>
-      <img
-        src="../assets/bubbleChat.svg"
-        style="
-          align-self: center;
-          width: 20vw;
-          -webkit-animation: scaleX(-1);
-          transform: scaleX(-1);
+      <div id="wrapper"
+      class="container"
+      style="
+        --fd: row;
+        --jc: center;
+        --ai: flex-end;
+        height: 100vh;
+      "
         "
-        alt="bubble chat"
-      />
-      <a href="../pages/bridging.html"
-        ><img
-          src="../assets/ljtBtn.svg"
-          style="align-self: center; width: 12vw; margin-bottom: 10vh"
-          alt="lanjut button"
-      /></a>
+      >
+        <img
+          src="../assets/bubbleChat.svg"
+          style="align-self: center; width: 20vw"
+          alt="bubble chat"
+        />
+        <a href="../../index.html"
+          ><img src="../assets/char/hai.svg" class="char" alt="char introduce"
+        /></a>
+        <a href="../pages/bridging.html" style="position: fixed;bottom: 1%;right: 1%;width: 12vw;"
+          ><img
+            src="../assets/ljtBtn.svg"
+            
+            alt="lanjut button"
+        /></a>
+      </div>
+      <div
+        id="myModal"
+        class="container"
+        style="
+          --jc: center;
+          --ai: center;
+          overflow: auto;
+          background-color: rgba(0, 0, 0, 0);
+        "
+      >
+        <!-- Modal content -->
+        <div class="modal-content">
+          <p>
+            Maksimalkan pengalaman mengeksplorasi newsgames "Manis Tak Seindah
+            Akhirnya" dengan memutar layar perangkat menjadi mode lanskap
+          </p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
