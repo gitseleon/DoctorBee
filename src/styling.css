@@ -46,7 +46,7 @@ body {
   position: relative;
   width: 300px;
   height: auto;
-  background-color: lightyellow;
+  background-color: #d5e0e6;
   font-size: 1rem;
 }
 
@@ -69,6 +69,10 @@ body {
   -moz-border-radius: 15px;
 }
 
+.border{
+  border: 8px solid #183b5b;
+}
+
 .tri-right.border.left-top:before {
   content: " ";
   position: absolute;
@@ -79,7 +83,7 @@ body {
   top: -8px;
   bottom: auto;
   border: 32px solid;
-  border-color: #666 transparent transparent transparent;
+  border-color: #183b5b transparent transparent transparent;
 }
 
 .tri-right.left-top:after {
@@ -92,7 +96,7 @@ body {
   top: 0px;
   bottom: auto;
   border: 22px solid;
-  border-color: lightyellow transparent transparent transparent;
+  border-color: #d5e0e6   transparent transparent transparent;
 }
 
 /* Right triangle placed top right flush. */
@@ -106,7 +110,7 @@ body {
   top: -8px;
   bottom: auto;
   border: 32px solid;
-  border-color: #666 transparent transparent transparent;
+  border-color: #183b5b transparent transparent transparent;
 }
 
 .tri-right.right-top:after {
@@ -119,7 +123,7 @@ body {
   top: 0px;
   bottom: auto;
   border: 20px solid;
-  border-color: lightyellow transparent transparent transparent;
+  border-color: #d5e0e6 transparent transparent transparent;
 }
 
 #startBtn:hover {
