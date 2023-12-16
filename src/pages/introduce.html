@@ -17,68 +17,127 @@
       <div
         id="wrapper"
         class="container"
-        style="--fd: row; --jc: center; --ai: flex-end; height: 80vh"
+        style="
+          --fd: column;
+          --jc: center;
+          --ai: center;
+          height: 100vh;
+          width: 100vw;
+        "
       >
-        <div class="container" style="--fd: column; --as: center">
-          <div
-            class="talk-bubble tri-right round right-top fade-in-right border"
-            style="--dur: 2s; --delay: 2s"
-          >
-            <div class="talktext">
-              <p>Selamat datang di newsgames “Manis Tak Seindah Akhirnya”!</p>
-            </div>
-          </div>
-          <div
-            class="talk-bubble tri-right round right-top fade-in-right border"
-            style="--dur: 2s; --delay: 4s"
-          >
-            <div class="talktext">
-              <p>
-                Hai! Namaku Bee. Aku seorang dokter spesialis penyakit dalam
-                dengan subspesialisasi endokrin - metabolik - diabetes. Kamu
-                bisa panggil aku dokter Bee, ya.
-              </p>
-            </div>
+        <img
+          src="../assets/char/hai.svg"
+          id="hallo"
+          class="char slide-in-bottom"
+          alt="character"
+          style="
+            position: fixed;
+            bottom: 1%;
+            left: 1%;
+            --dur: 1s;
+            --delay: 0s;
+            align-self: center;
+          "
+        />
+        <img
+          src="../assets/char/ide.svg"
+          id="ide"
+          class="char slide-in-bottom"
+          alt="character"
+          style="
+            position: fixed;
+            bottom: 1%;
+            left: 1%;
+            --dur: 1s;
+            --delay: 0s;
+            align-self: center;
+            display: none;
+          "
+        />
+        <img
+          src="../assets/char/senyum.svg"
+          id="senyum"
+          class="char slide-in-bottom"
+          alt="character"
+          style="
+            position: fixed;
+            bottom: 1%;
+            left: 1%;
+            --dur: 1s;
+            --delay: 0s;
+            align-self: center;
+            display: none;
+          "
+        />
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s"
+          id="1"
+          onclick="show2()"
+        >
+          <div class="talktext glow">
+            <p>Selamat datang di newsgames “Manis Tak Seindah Akhirnya”!</p>
           </div>
         </div>
         <div
-          class="container slide-in-bottom"
-          style="--fd: column; --ai: center; --dur: 1s; --delay: 0s"
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 0s; display: none"
+          id="2"
+          onclick="show3()"
         >
-          <h1>dr. Bee, Sp.PD-KEMD</h1>
-          <a href="../../index.html"
-            ><img
-              src="../assets/char/hai.svg"
-              class="char"
-              alt="character"
-              style="align-self: center"
-          /></a>
+          <div class="talktext glow">
+            <p>
+              hallo! Namaku Bee. Aku seorang dokter spesialis penyakit dalam
+              dengan subspesialisasi endokrin - metabolik - diabetes. Kamu bisa
+              panggil aku dokter Bee, ya.
+            </p>
+          </div>
         </div>
-        <div class="container" style="--fd: column; --as: center">
-          <div
-            class="talk-bubble tri-right round left-top fade-in-left border"
-            style="--dur: 2s; --delay: 5s"
-          >
-            <div class="talktext">
-              <p>
-                Aku di sini sebagai pemandu kamu sepanjang newsgames ini. Kalau
-                kamu belum tahu, newsgames adalah berita dalam bentuk perangkat
-                lunak yang dapat memuat tulisan, video, grafis, audio dengan
-                skala interaktivitas yang tinggi.
-              </p>
-            </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s; display: none"
+          id="3"
+          onclick="show4()"
+        >
+          <div class="talktext glow">
+            <p>
+              Aku di sini sebagai pemandu kamu sepanjang newsgames ini. Kalau
+              kamu belum tahu, newsgames adalah berita dalam bentuk perangkat
+              lunak yang dapat memuat tulisan, video, grafis, audio dengan skala
+              interaktivitas yang tinggi.
+            </p>
           </div>
-          <div
-            class="talk-bubble tri-right round left-top fade-in-left border"
-            style="--dur: 2s; --delay: 7s"
-          >
-            <div class="talktext">
-              <p>
-                Sekarang ini newsgames dianggap sebagai inovasi bentuk penyajian
-                berita dalam dunia jurnalistik.
-              </p>
-            </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 0s; display: none"
+          id="4"
+          onclick="show5()"
+        >
+          <div class="talktext glow">
+            <p>
+              Sekarang ini newsgames dianggap sebagai inovasi bentuk penyajian
+              berita dalam dunia jurnalistik.
+            </p>
           </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s; display: none"
+          id="5"
+        >
+          <div class="talktext">
+            <p>Nah, tanpa berlama-lama lagi, yuk ikut aku!</p>
+          </div>
+        </div>
+        <div style="position: fixed; bottom: 1%; display: none" id="list">
+          <ul>
+            <li onclick="show1()">1</li>
+            <li onclick="show2()">2</li>
+            <li onclick="show3()">3</li>
+            <li onclick="show4()">4</li>
+            <li onclick="show5()">5</li>
+          </ul>
         </div>
         <a
           href="../pages/bridging.html"
@@ -89,8 +148,10 @@
             right: 1%;
             width: 12vw;
             --dur: 1.5s;
-            --delay: 10s;
+            --delay: 2s;
+            display: none;
           "
+          id="lanjut"
           ><img src="../assets/ljtBtn.svg" alt="lanjut button"
         /></a>
       </div>
@@ -113,5 +174,61 @@
         </div>
       </div>
     </div>
+    <script>
+      function show1() {
+        document.getElementById("1").style.display = "block";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("ide").style.display = "none";
+        document.getElementById("hallo").style.display = "block";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("senyum").style.display = "none";
+        document.getElementById("lanjut").style.display = "none";
+      }
+      function show2() {
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "block";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("ide").style.display = "none";
+        document.getElementById("hallo").style.display = "block";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("senyum").style.display = "none";
+        document.getElementById("lanjut").style.display = "none";
+      }
+      function show3() {
+        document.getElementById("2").style.display = "none";
+        document.getElementById("3").style.display = "block";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("ide").style.display = "block";
+        document.getElementById("hallo").style.display = "none";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("senyum").style.display = "none";
+        document.getElementById("lanjut").style.display = "none";
+      }
+      function show4() {
+        document.getElementById("3").style.display = "none";
+        document.getElementById("4").style.display = "block";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("ide").style.display = "block";
+        document.getElementById("hallo").style.display = "none";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("senyum").style.display = "none";
+        document.getElementById("lanjut").style.display = "none";
+      }
+      function show5() {
+        document.getElementById("4").style.display = "none";
+        document.getElementById("5").style.display = "block";
+        document.getElementById("lanjut").style.display = "block";
+        document.getElementById("list").style.display = "block";
+        document.getElementById("senyum").style.display = "block";
+        document.getElementById("ide").style.display = "none";
+        document.getElementById("hallo").style.display = "none";
+        document.getElementById("1").style.display = "none";document.getElementById("2").style.display = "none";document.getElementById("3").style.display = "none";
+      }
+    </script>
   </body>
 </html>

@@ -1,43 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Bee Demo</title>
     <link rel="stylesheet" href="../styling.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
   </head>
+
   <body>
     <div
       class="container"
       style="--fd: column; --jc: center; --ai: center; height: 100vh"
     >
-      <div id="wrapper"
-      class="container"
-      style="
-        --fd: row;
-        --jc: center;
-        --ai: flex-end;
-        height: 100vh;
-      "
+      <div
+        id="wrapper"
+        class="container"
+        style="
+          --fd: column;
+          --jc: center;
+          --ai: center;
+          height: 100vh;
+          width: 100vw;
         "
       >
         <img
-          src="../assets/bubbleChat.svg"
-          style="align-self: center; width: 20vw"
-          alt="bubble chat"
+          src="../assets/char/berpikir.svg"
+          id="berpikir"
+          class="char slide-in-bottom"
+          alt="character"
+          style="
+            position: fixed;
+            bottom: 1%;
+            left: 1%;
+            --dur: 1s;
+            --delay: 0s;
+            align-self: center;
+            display: none;
+          "
         />
-        <a href="../../index.html"
-          ><img src="../assets/char/hai.svg" class="char" alt="char introduce"
-        /></a>
-        <a href="../pages/bridging.html" style="position: fixed;bottom: 1%;right: 1%;width: 12vw;"
-          ><img
-            src="../assets/ljtBtn.svg"
-            
-            alt="lanjut button"
+        <img
+          src="../assets/char/hai.svg"
+          id="hallo"
+          class="char slide-in-bottom"
+          alt="character"
+          style="
+            position: fixed;
+            bottom: 1%;
+            left: 1%;
+            --dur: 1s;
+            --delay: 0s;
+            align-self: center;
+            display: none;
+          "
+        />
+        <img
+          src="../assets/char/ide.svg"
+          id="ide"
+          class="char slide-in-bottom"
+          alt="character"
+          style="
+            position: fixed;
+            bottom: 1%;
+            left: 1%;
+            --dur: 1s;
+            --delay: 0s;
+            align-self: center;
+            display: none;
+          "
+        />
+        <img
+          src="../assets/char/senyum.svg"
+          id="senyum"
+          class="char slide-in-bottom"
+          alt="character"
+          style="
+            position: fixed;
+            bottom: 1%;
+            left: 1%;
+            --dur: 1s;
+            --delay: 0s;
+            align-self: center;
+            display: block;
+          "
+        />
+        <img
+          src="../assets/char/nunjuk.svg"
+          id="nunjuk"
+          class="char slide-in-bottom"
+          alt="character"
+          style="
+            position: fixed;
+            bottom: 1%;
+            left: 1%;
+            --dur: 1s;
+            --delay: 0s;
+            align-self: center;
+            display: none;
+          "
+        />
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s"
+          id="1"
+          onclick="show2()"
+        >
+          <div class="talktext glow">
+            <p>
+              Tahukah kamu, bahwa makanan sehari-hari sangat memengaruhi
+              kesehatan?
+            </p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 0s; display: none"
+          id="2"
+          onclick="show3()"
+        >
+          <div class="talktext glow">
+            <p>
+              Makanan yang kita konsumsi sehari-hari punya pengaruh yang sangat
+              besar terhadap kesehatan kita lho.
+            </p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s; display: none"
+          id="3"
+          onclick="show4()"
+        >
+          <div class="talktext glow">
+            <p>Kok bisa sih, makanan berpengaruh sama kesehatan?</p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 0s; display: none"
+          id="4"
+          onclick="show5()"
+        >
+          <div class="talktext glow">
+            <p>
+              Bukankah makanan itu yang penting membuat kita kenyang dan senang?
+            </p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s; display: none"
+          id="5"
+          onclick="show6()"
+        >
+          <div class="talktext">
+            <p>Lalu, apa hubungannya dengan kesehatan?</p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s; display: none"
+          id="6"
+          onclick="show7()"
+        >
+          <div class="talktext">
+            <p>
+              Menurut Kamus Besar Bahasa Indonesia (KBBI), makanan merupakan
+              segala bahan yang kita makan atau masuk ke dalam tubuh yang
+              membentuk atau mengganti jaringan tubuh, memberikan tenaga, atau
+              mengatur semua proses dalam tubuh.
+            </p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s; display: none"
+          id="7"
+          onclick="show8()"
+        >
+          <div class="talktext">
+            <p>
+              Nah, agar tubuh dapat berkembang dengan baik serta kesehatan tetap
+              terjaga, mengonsumsi makanan penuh gizi dan nutrisi merupakan
+              salah satu caranya.
+            </p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s; display: none"
+          id="8"
+          onclick="show9()"
+        >
+          <div class="talktext">
+            <p>
+              Menurut World Health Organization (WHO), gizi dan nutrisi memiliki
+              peran yang baik untuk kesehatan tubuh serta pertumbuhan.
+            </p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s; display: none"
+          id="9"
+          onclick="show10()"
+        >
+          <div class="talktext">
+            <p>
+              Sebagai contoh, gizi dan nutrisi yang terkandung dalam makanan
+              berupa protein, karbohidrat, lemak, vitamin, air serta mineral.
+            </p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s; display: none"
+          id="10"
+          onclick="show11()"
+        >
+          <div class="talktext">
+            <p>
+              Zat yang diperlukan oleh tubuh dan berasal dari makanan itu
+              disebut zat makanan atau zat gizi.
+            </p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s; display: none"
+          id="11"
+          onclick="show12()"
+        >
+          <div class="talktext">
+            <p>
+              Asupan gizi dan nutrisi harus sesuai dengan jumlah yang dibutuhkan
+              tubuh. Jika berlebih atau kurang, sama-sama bisa menyebabkan
+              berbagai penyakit.
+            </p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s; display: none"
+          id="12"
+          onclick="show13()"
+        >
+          <div class="talktext">
+            <p>
+              Lalu, apa dampaknya bagi tubuh jika kelebihan atau kekurangan
+              asupan nutrisi dan gizi?
+            </p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s; display: none"
+          id="13"
+        >
+          <div class="talktext">
+            <p>
+              Ternyata, kelebihan atau kekurangan asupan nutrisi dan gizi dapat
+              menimbulkan beberapa penyakit tertentu, salah satunya diabetes.
+            </p>
+          </div>
+        </div>
+        <div style="position: fixed; bottom: 1%; display: none" id="list">
+          <ul>
+            <li onclick="show1()">1</li>
+            <li onclick="show2()">2</li>
+            <li onclick="show3()">3</li>
+            <li onclick="show4()">4</li>
+            <li onclick="show5()">5</li>
+            <li onclick="show6()">6</li>
+            <li onclick="show7()">7</li>
+            <li onclick="show8()">8</li>
+            <li onclick="show9()">9</li>
+            <li onclick="show10()">10</li>
+            <li onclick="show11()">11</li>
+            <li onclick="show12()">12</li>
+            <li onclick="show13()">13</li>
+          </ul>
+        </div>
+        <a
+          href="../../index.html"
+          class="heartbeat"
+          style="
+            position: fixed;
+            bottom: 1%;
+            right: 1%;
+            width: 12vw;
+            --dur: 1.5s;
+            --delay: 2s;
+            display: none;
+          "
+          id="lanjut"
+          ><img src="../assets/ljtBtn.svg" alt="lanjut button"
         /></a>
       </div>
       <div
@@ -59,5 +317,282 @@
         </div>
       </div>
     </div>
+    <script>
+      function show1() {
+        document.getElementById("1").style.display = "block";
+        document.getElementById("senyum").style.display = "block";
+        document.getElementById("lanjut").style.display = "none";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("6").style.display = "none";
+        document.getElementById("7").style.display = "none";
+        document.getElementById("8").style.display = "none";
+        document.getElementById("9").style.display = "none";
+        document.getElementById("10").style.display = "none";
+        document.getElementById("11").style.display = "none";
+        document.getElementById("12").style.display = "none";
+        document.getElementById("13").style.display = "none";
+        document.getElementById("hallo").style.display = "none";
+        document.getElementById("ide").style.display = "none";
+        document.getElementById("nunjuk").style.display = "none";
+        document.getElementById("berpikir").style.display = "none";
+      }
+      function show2() {
+        document.getElementById("2").style.display = "block";
+        document.getElementById("senyum").style.display = "block";
+        document.getElementById("lanjut").style.display = "none";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("6").style.display = "none";
+        document.getElementById("7").style.display = "none";
+        document.getElementById("8").style.display = "none";
+        document.getElementById("9").style.display = "none";
+        document.getElementById("10").style.display = "none";
+        document.getElementById("11").style.display = "none";
+        document.getElementById("12").style.display = "none";
+        document.getElementById("13").style.display = "none";
+        document.getElementById("14").style.display = "none";
+        document.getElementById("hai").style.display = "none";
+        document.getElementById("berpikir").style.display = "none";
+        document.getElementById("ide").style.display = "none";
+        document.getElementById("nunjuk").style.display = "none";
+      }
+      function show3() {
+        document.getElementById("3").style.display = "block";
+        document.getElementById("berpikir").style.display = "block";
+        document.getElementById("lanjut").style.display = "none";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("6").style.display = "none";
+        document.getElementById("7").style.display = "none";
+        document.getElementById("8").style.display = "none";
+        document.getElementById("9").style.display = "none";
+        document.getElementById("10").style.display = "none";
+        document.getElementById("11").style.display = "none";
+        document.getElementById("12").style.display = "none";
+        document.getElementById("13").style.display = "none";
+        document.getElementById("hallo").style.display = "none";
+        document.getElementById("ide").style.display = "none";
+        document.getElementById("nunjuk").style.display = "none";
+        document.getElementById("senyum").style.display = "none";
+      }
+      function show4() {
+        document.getElementById("4").style.display = "block";
+        document.getElementById("berpikir").style.display = "block";
+        document.getElementById("lanjut").style.display = "none";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("6").style.display = "none";
+        document.getElementById("7").style.display = "none";
+        document.getElementById("8").style.display = "none";
+        document.getElementById("9").style.display = "none";
+        document.getElementById("10").style.display = "none";
+        document.getElementById("11").style.display = "none";
+        document.getElementById("12").style.display = "none";
+        document.getElementById("13").style.display = "none";
+        document.getElementById("hallo").style.display = "none";
+        document.getElementById("ide").style.display = "none";
+        document.getElementById("nunjuk").style.display = "none";
+        document.getElementById("senyum").style.display = "none";
+      }
+      function show5() {
+        document.getElementById("5").style.display = "block";
+        document.getElementById("berpikir").style.display = "block";
+        document.getElementById("lanjut").style.display = "none";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("6").style.display = "none";
+        document.getElementById("7").style.display = "none";
+        document.getElementById("8").style.display = "none";
+        document.getElementById("9").style.display = "none";
+        document.getElementById("10").style.display = "none";
+        document.getElementById("11").style.display = "none";
+        document.getElementById("12").style.display = "none";
+        document.getElementById("13").style.display = "none";
+        document.getElementById("hallo").style.display = "none";
+        document.getElementById("ide").style.display = "none";
+        document.getElementById("nunjuk").style.display = "none";
+        document.getElementById("senyum").style.display = "none";
+      }
+      function show6() {
+        document.getElementById("6").style.display = "block";
+        document.getElementById("ide").style.display = "block";
+        document.getElementById("lanjut").style.display = "none";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("7").style.display = "none";
+        document.getElementById("8").style.display = "none";
+        document.getElementById("9").style.display = "none";
+        document.getElementById("10").style.display = "none";
+        document.getElementById("11").style.display = "none";
+        document.getElementById("12").style.display = "none";
+        document.getElementById("13").style.display = "none";
+        document.getElementById("hallo").style.display = "none";
+        document.getElementById("berpikir").style.display = "none";
+        document.getElementById("nunjuk").style.display = "none";
+        document.getElementById("senyum").style.display = "none";
+      }
+      function show7() {
+        document.getElementById("7").style.display = "block";
+        document.getElementById("ide").style.display = "block";
+        document.getElementById("lanjut").style.display = "none";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("6").style.display = "none";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("8").style.display = "none";
+        document.getElementById("9").style.display = "none";
+        document.getElementById("10").style.display = "none";
+        document.getElementById("11").style.display = "none";
+        document.getElementById("12").style.display = "none";
+        document.getElementById("13").style.display = "none";
+        document.getElementById("hallo").style.display = "none";
+        document.getElementById("berpikir").style.display = "none";
+        document.getElementById("nunjuk").style.display = "none";
+        document.getElementById("senyum").style.display = "none";
+      }
+      function show8() {
+        document.getElementById("8").style.display = "block";
+        document.getElementById("senyum").style.display = "block";
+        document.getElementById("lanjut").style.display = "none";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("6").style.display = "none";
+        document.getElementById("7").style.display = "none";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("9").style.display = "none";
+        document.getElementById("10").style.display = "none";
+        document.getElementById("11").style.display = "none";
+        document.getElementById("12").style.display = "none";
+        document.getElementById("13").style.display = "none";
+        document.getElementById("hallo").style.display = "none";
+        document.getElementById("ide").style.display = "none";
+        document.getElementById("nunjuk").style.display = "none";
+        document.getElementById("berpikir").style.display = "none";
+      }
+      function show9() {
+        document.getElementById("9").style.display = "block";
+        document.getElementById("senyum").style.display = "block";
+        document.getElementById("lanjut").style.display = "none";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("6").style.display = "none";
+        document.getElementById("7").style.display = "none";
+        document.getElementById("8").style.display = "none";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("10").style.display = "none";
+        document.getElementById("11").style.display = "none";
+        document.getElementById("12").style.display = "none";
+        document.getElementById("13").style.display = "none";
+        document.getElementById("hallo").style.display = "none";
+        document.getElementById("ide").style.display = "none";
+        document.getElementById("nunjuk").style.display = "none";
+        document.getElementById("berpikir").style.display = "none";
+      }
+      function show10() {
+        document.getElementById("10").style.display = "block";
+        document.getElementById("hallo").style.display = "block";
+        document.getElementById("lanjut").style.display = "none";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("6").style.display = "none";
+        document.getElementById("7").style.display = "none";
+        document.getElementById("8").style.display = "none";
+        document.getElementById("9").style.display = "none";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("11").style.display = "none";
+        document.getElementById("12").style.display = "none";
+        document.getElementById("13").style.display = "none";
+        document.getElementById("berpikir").style.display = "none";
+        document.getElementById("ide").style.display = "none";
+        document.getElementById("nunjuk").style.display = "none";
+        document.getElementById("senyum").style.display = "none";
+      }
+      function show11() {
+        document.getElementById("11").style.display = "block";
+        document.getElementById("hallo").style.display = "block";
+        document.getElementById("lanjut").style.display = "none";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("6").style.display = "none";
+        document.getElementById("7").style.display = "none";
+        document.getElementById("8").style.display = "none";
+        document.getElementById("9").style.display = "none";
+        document.getElementById("10").style.display = "none";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("12").style.display = "none";
+        document.getElementById("13").style.display = "none";
+        document.getElementById("berpikir").style.display = "none";
+        document.getElementById("ide").style.display = "none";
+        document.getElementById("nunjuk").style.display = "none";
+        document.getElementById("senyum").style.display = "none";
+      }
+      function show12() {
+        document.getElementById("12").style.display = "block";
+        document.getElementById("berpikir").style.display = "block";
+        document.getElementById("lanjut").style.display = "none";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("6").style.display = "none";
+        document.getElementById("7").style.display = "none";
+        document.getElementById("8").style.display = "none";
+        document.getElementById("9").style.display = "none";
+        document.getElementById("10").style.display = "none";
+        document.getElementById("11").style.display = "none";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("13").style.display = "none";
+        document.getElementById("hallo").style.display = "none";
+        document.getElementById("ide").style.display = "none";
+        document.getElementById("nunjuk").style.display = "none";
+        document.getElementById("senyum").style.display = "none";
+      }
+      function show13() {
+        document.getElementById("13").style.display = "block";
+        document.getElementById("nunjuk").style.display = "block";
+        document.getElementById("list").style.display = "block";
+        document.getElementById("lanjut").style.display = "block";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("6").style.display = "none";
+        document.getElementById("7").style.display = "none";
+        document.getElementById("8").style.display = "none";
+        document.getElementById("9").style.display = "none";
+        document.getElementById("10").style.display = "none";
+        document.getElementById("11").style.display = "none";
+        document.getElementById("12").style.display = "none";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("hallo").style.display = "none";
+        document.getElementById("ide").style.display = "none";
+        document.getElementById("berpikir").style.display = "none";
+        document.getElementById("senyum").style.display = "none";
+      }
+    </script>
   </body>
 </html>

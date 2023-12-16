@@ -40,27 +40,25 @@ body {
   margin-bottom: -20vh;
 }
 
+
 .talk-bubble {
   margin: 40px;
   display: inline-block;
   position: relative;
-  width: 300px;
+  width: 40vw;
   height: auto;
   background-color: #d5e0e6;
-  font-size: 80%;
 }
 
 /* talk bubble contents */
 .talktext {
   padding: 1em;
   text-align: left;
-  line-height: 1.5em;
 }
 
 .talktext p {
   /* remove webkit p margins */
-  -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em;
+  font-size: 2vw;
 }
 
 .round {
@@ -69,7 +67,7 @@ body {
   -moz-border-radius: 15px;
 }
 
-.border{
+.border {
   border: 8px solid #183b5b;
 }
 
@@ -96,11 +94,11 @@ body {
   top: 0px;
   bottom: auto;
   border: 22px solid;
-  border-color: #d5e0e6   transparent transparent transparent;
+  border-color: #d5e0e6 transparent transparent transparent;
 }
 
 /* Right triangle placed top right flush. */
-.tri-right.border.right-top:before {
+/* .tri-right.border.right-top:before {
   content: " ";
   position: absolute;
   width: 0;
@@ -124,7 +122,7 @@ body {
   bottom: auto;
   border: 20px solid;
   border-color: #d5e0e6 transparent transparent transparent;
-}
+} */
 
 #startBtn:hover {
   animation: tilt 0.7s infinite;
@@ -150,6 +148,22 @@ body {
   animation-fill-mode: backwards;
 }
 
+.glow {
+  animation: glow 1.5s linear infinite;
+}
+
+li {
+  display: inline-block;
+  border: 1px solid #d5e0e6;
+  border-radius: 100%;
+  padding: 0px 9px;
+  background-color: #d5e0e6;
+}
+
+.active {
+  background-color: red;
+}
+
 @keyframes tilt {
   25% {
     transform: rotate(10deg);
@@ -162,6 +176,12 @@ body {
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+@keyframes glow {
+  50% {
+    background-color: #fff;
   }
 }
 
