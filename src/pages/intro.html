@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Doctor Bee Demo</title>
+    <link rel="stylesheet" href="../styling.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div
+      class="container"
+      style="--fd: column; --jc: center; --ai: center; height: 100vh"
+    >
+      <div
+        id="wrapper"
+        class="container"
+        style="
+          --fd: column;
+          --jc: center;
+          --ai: center;
+          height: 100vh;
+          width: 100vw;
+        "
+      >
+        <img
+          src="../assets/char/senyum.svg"
+          id="senyum"
+          class="char slide-in-bottom"
+          alt="character"
+          style="
+            position: fixed;
+            bottom: 1%;
+            left: 1%;
+            --dur: 1s;
+            --delay: 0s;
+            align-self: center;
+            display: block;
+          "
+        />
+        <img
+          src="../assets/char/berpikir.svg"
+          id="berpikir"
+          class="char slide-in-bottom"
+          alt="character"
+          style="
+            position: fixed;
+            bottom: 1%;
+            left: 1%;
+            --dur: 1s;
+            --delay: 0s;
+            align-self: center;
+            display: none;
+          "
+        />
+        <img
+          src="../assets/char/berpikir.svg"
+          id="berpikir-center"
+          class="char slide-in-bottom"
+          alt="character"
+          style="
+            position: fixed;
+            bottom: 1%;
+            left: 1%;
+            --dur: 1s;
+            --delay: 0s;
+            align-self: center;
+            display: none;
+          "
+        />
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s"
+          id="1"
+          onclick="show2()"
+        >
+          <div class="talktext glow">
+            <p>
+              Nah, sebelum kita masuk dalam topik diabetes lebih lanjut, aku mau
+              menjelaskan dulu apa saja makanan yang menjadi penyebab diabetes”!
+            </p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 0s; display: none"
+          id="2"
+          onclick="show3()"
+        >
+          <div class="talktext glow">
+            <p>
+              Dilansir dari situs resmi Siloam Hospital, ada 7 makanan dan
+              minuman penyebab diabetes.
+            </p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s; display: none"
+          id="3"
+          onclick="show4()"
+        >
+          <div class="talktext glow">
+            <p>
+              Tujuh makanan dan minuman penyebab diabetes adalah makanan tinggi
+              karbohidrat, camilan kemasan, buah kering, minuman berenergi,
+              minuman beralkohol, dan daging olahan.
+            </p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 0s; display: none"
+          id="4"
+          onclick="show5()"
+        >
+          <div class="talktext glow">
+            <p>
+              Yuk, kita simak penjelasan dari tiap jenis makanan ini. Klik tiap
+              ikon untuk mengetahui lebih lanjut.
+            </p>
+          </div>
+        </div>
+        <!-- <div style="position: fixed; bottom: 1%; display: none" id="list">
+        <ul>
+          <li onclick="show1()">1</li>
+          <li onclick="show2()">2</li>
+          <li onclick="show3()">3</li>
+          <li onclick="show4()">4</li>
+          <li onclick="show5()">5</li>
+        </ul>
+      </div> -->
+        <a
+          href="../pages/content.html"
+          class="heartbeat"
+          style="
+            position: fixed;
+            bottom: 1%;
+            right: 1%;
+            width: 12vw;
+            --dur: 1.5s;
+            --delay: 2s;
+            display: none;
+          "
+          id="lanjut"
+          ><img src="../assets/ljtBtn.svg" alt="lanjut button"
+        /></a>
+      </div>
+      <div
+        id="myModal"
+        class="container"
+        style="
+          --jc: center;
+          --ai: center;
+          overflow: auto;
+          background-color: rgba(0, 0, 0, 0);
+        "
+      >
+        <!-- Modal content -->
+        <div class="modal-content">
+          <p>
+            Maksimalkan pengalaman mengeksplorasi newsgames "Manis Tak Seindah
+            Akhirnya" dengan memutar layar perangkat menjadi mode lanskap
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function show1() {}
+      function show2() {
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "block";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("berpikir").style.display = "none";
+        document.getElementById("senyum").style.display = "block";
+        document.getElementById("lanjut").style.display = "none";
+      }
+      function show3() {
+        document.getElementById("2").style.display = "none";
+        document.getElementById("3").style.display = "block";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("berpikir").style.display = "block";
+        document.getElementById("senyum").style.display = "none";
+        document.getElementById("lanjut").style.display = "none";
+      }
+      function show4() {
+        document.getElementById("3").style.display = "none";
+        document.getElementById("4").style.display = "block";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("berpikir").style.display = "block";
+        document.getElementById("senyum").style.display = "none";
+        document.getElementById("lanjut").style.display = "block";
+      }
+    </script>
+  </body>
+</html>

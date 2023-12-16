@@ -40,6 +40,39 @@ body {
   margin-bottom: -20vh;
 }
 
+figure {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 11vw;
+  height: 26vh;
+  background-color: #ffc3b0;
+  border: 3px solid #ffc3b0 ;
+  border-radius: 50%;
+}
+
+figcaption {
+  position: absolute;
+  inset: 2px;
+  display: none;
+}
+
+figure:hover figcaption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffc3b0;
+  border: 3px solid #ffc3b0 ;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+figcaption {
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+}
 
 .talk-bubble {
   margin: 40px;
