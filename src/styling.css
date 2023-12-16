@@ -12,7 +12,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  font-family: "Poppins", sans-serif;
+  font-family: "Lusitana", serif;
   overflow: hidden;
 }
 
@@ -22,6 +22,36 @@ body {
   justify-content: var(--jc);
   align-items: var(--ai);
   align-self: var(--as);
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.content-body {
+  background-color: #d5e0e6;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 15px;
+  text-align: justify;
+}
+
+.content-body > p {
+  font-size: 2vw;
+  padding: 20px;
+  text-indent: 5vw;
 }
 
 /* Modal Content */
@@ -35,6 +65,21 @@ body {
   text-align: center;
 }
 
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .char {
   width: 30vw;
   margin-bottom: -20vh;
@@ -45,10 +90,10 @@ figure {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 11vw;
+  width: 12vw;
   height: 26vh;
   background-color: #ffc3b0;
-  border: 3px solid #ffc3b0 ;
+  border: 3px solid #ffc3b0;
   border-radius: 50%;
 }
 
@@ -63,7 +108,7 @@ figure:hover figcaption {
   justify-content: center;
   align-items: center;
   background-color: #ffc3b0;
-  border: 3px solid #ffc3b0 ;
+  border: 3px solid #ffc3b0;
   border-radius: 50%;
   opacity: 0.8;
 }
@@ -185,16 +230,29 @@ figcaption {
   animation: glow 1.5s linear infinite;
 }
 
+.mySlides, .mySlides2, .mySlides3 {
+  max-width: 80%;
+  display: none;
+  margin: 10px 0px;
+}
+
 li {
   display: inline-block;
-  border: 1px solid #d5e0e6;
-  border-radius: 100%;
-  padding: 0px 9px;
+  list-style: none;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #183b5b;
+  border-radius: 50%;
+  padding: 1px 7px;
   background-color: #d5e0e6;
 }
 
 .active {
-  background-color: red;
+  background-color: #183b5b;
+}
+
+.btn:hover {
+  background-color: #183b5b;
 }
 
 @keyframes tilt {

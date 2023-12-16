@@ -3,6 +3,12 @@
   <head>
     <title>Doctor Bee Demo</title>
     <link rel="stylesheet" href="../styling.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lusitana&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
@@ -156,7 +162,7 @@
           id="5"
           onclick="show6()"
         >
-          <div class="talktext">
+          <div class="talktext glow">
             <p>Lalu, apa hubungannya dengan kesehatan?</p>
           </div>
         </div>
@@ -166,7 +172,7 @@
           id="6"
           onclick="show7()"
         >
-          <div class="talktext">
+          <div class="talktext glow">
             <p>
               Menurut Kamus Besar Bahasa Indonesia (KBBI), makanan merupakan
               segala bahan yang kita makan atau masuk ke dalam tubuh yang
@@ -181,7 +187,7 @@
           id="7"
           onclick="show8()"
         >
-          <div class="talktext">
+          <div class="talktext glow">
             <p>
               Nah, agar tubuh dapat berkembang dengan baik serta kesehatan tetap
               terjaga, mengonsumsi makanan penuh gizi dan nutrisi merupakan
@@ -195,7 +201,7 @@
           id="8"
           onclick="show9()"
         >
-          <div class="talktext">
+          <div class="talktext glow">
             <p>
               Menurut World Health Organization (WHO), gizi dan nutrisi memiliki
               peran yang baik untuk kesehatan tubuh serta pertumbuhan.
@@ -208,7 +214,7 @@
           id="9"
           onclick="show10()"
         >
-          <div class="talktext">
+          <div class="talktext glow">
             <p>
               Sebagai contoh, gizi dan nutrisi yang terkandung dalam makanan
               berupa protein, karbohidrat, lemak, vitamin, air serta mineral.
@@ -221,7 +227,7 @@
           id="10"
           onclick="show11()"
         >
-          <div class="talktext">
+          <div class="talktext glow">
             <p>
               Zat yang diperlukan oleh tubuh dan berasal dari makanan itu
               disebut zat makanan atau zat gizi.
@@ -234,7 +240,7 @@
           id="11"
           onclick="show12()"
         >
-          <div class="talktext">
+          <div class="talktext glow">
             <p>
               Asupan gizi dan nutrisi harus sesuai dengan jumlah yang dibutuhkan
               tubuh. Jika berlebih atau kurang, sama-sama bisa menyebabkan
@@ -248,7 +254,7 @@
           id="12"
           onclick="show13()"
         >
-          <div class="talktext">
+          <div class="talktext glow">
             <p>
               Lalu, apa dampaknya bagi tubuh jika kelebihan atau kekurangan
               asupan nutrisi dan gizi?
@@ -269,19 +275,19 @@
         </div>
         <div style="position: fixed; bottom: 1%; display: none" id="list">
           <ul>
-            <li onclick="show1()">1</li>
-            <li onclick="show2()">2</li>
-            <li onclick="show3()">3</li>
-            <li onclick="show4()">4</li>
-            <li onclick="show5()">5</li>
-            <li onclick="show6()">6</li>
-            <li onclick="show7()">7</li>
-            <li onclick="show8()">8</li>
-            <li onclick="show9()">9</li>
-            <li onclick="show10()">10</li>
-            <li onclick="show11()">11</li>
-            <li onclick="show12()">12</li>
-            <li onclick="show13()">13</li>
+            <li class="btn" onclick="show1()"></li>
+            <li class="btn" onclick="show2()"></li>
+            <li class="btn" onclick="show3()"></li>
+            <li class="btn" onclick="show4()"></li>
+            <li class="btn" onclick="show5()"></li>
+            <li class="btn" onclick="show6()"></li>
+            <li class="btn" onclick="show7()"></li>
+            <li class="btn" onclick="show8()"></li>
+            <li class="btn" onclick="show9()"></li>
+            <li class="btn" onclick="show10()"></li>
+            <li class="btn" onclick="show11()"></li>
+            <li class="btn" onclick="show12()"></li>
+            <li class="btn active" onclick="show13()"></li>
           </ul>
         </div>
         <a
@@ -320,6 +326,7 @@
       </div>
     </div>
     <script>
+      var header = document.getElementById("list");
       function show1() {
         document.getElementById("1").style.display = "block";
         document.getElementById("senyum").style.display = "block";
@@ -594,6 +601,16 @@
         document.getElementById("ide").style.display = "none";
         document.getElementById("berpikir").style.display = "none";
         document.getElementById("senyum").style.display = "none";
+      }
+      var btns = header.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+          var current = document.getElementsByClassName("active");
+          if (current.length > 0) {
+            current[0].className = current[0].className.replace(" active", "");
+          }
+          this.className += " active";
+        });
       }
     </script>
   </body>

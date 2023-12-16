@@ -3,6 +3,12 @@
   <head>
     <title>Doctor Bee Demo</title>
     <link rel="stylesheet" href="../styling.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lusitana&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
@@ -132,11 +138,11 @@
         </div>
         <div style="position: fixed; bottom: 1%; display: none" id="list">
           <ul>
-            <li onclick="show1()">1</li>
-            <li onclick="show2()">2</li>
-            <li onclick="show3()">3</li>
-            <li onclick="show4()">4</li>
-            <li onclick="show5()">5</li>
+            <li class="btn" onclick="show1()"></li>
+            <li class="btn" onclick="show2()"></li>
+            <li class="btn" onclick="show3()"></li>
+            <li class="btn" onclick="show4()"></li>
+            <li class="btn active" onclick="show5()"></li>
           </ul>
         </div>
         <a
@@ -175,6 +181,7 @@
       </div>
     </div>
     <script>
+      var header = document.getElementById("list");
       function show1() {
         document.getElementById("1").style.display = "block";
         document.getElementById("2").style.display = "none";
@@ -223,11 +230,23 @@
         document.getElementById("4").style.display = "none";
         document.getElementById("5").style.display = "block";
         document.getElementById("lanjut").style.display = "block";
-        document.getElementById("list").style.display = "block";
+        header.style.display = "block";
         document.getElementById("senyum").style.display = "block";
         document.getElementById("ide").style.display = "none";
         document.getElementById("hallo").style.display = "none";
-        document.getElementById("1").style.display = "none";document.getElementById("2").style.display = "none";document.getElementById("3").style.display = "none";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("3").style.display = "none";
+      }
+      var btns = header.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+          var current = document.getElementsByClassName("active");
+          if (current.length > 0) {
+            current[0].className = current[0].className.replace(" active", "");
+          }
+          this.className += " active";
+        });
       }
     </script>
   </body>

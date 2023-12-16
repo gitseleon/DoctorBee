@@ -3,6 +3,12 @@
   <head>
     <title>Doctor Bee Demo</title>
     <link rel="stylesheet" href="../styling.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lusitana&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
@@ -40,7 +46,7 @@
               alt="nasi"
               style="width: 10vw"
             />
-            <figcaption>Lihat Selengkapnya</figcaption>
+            <figcaption onclick="showNasi()">Lihat Selengkapnya</figcaption>
           </figure>
           <figure>
             <img
@@ -49,7 +55,7 @@
               alt="kemasan"
               style="width: 10vw"
             />
-            <figcaption>Lihat Selengkapnya</figcaption>
+            <figcaption onclick="showKemasan()">Lihat Selengkapnya</figcaption>
           </figure>
           <figure>
             <img
@@ -58,7 +64,9 @@
               alt="buahkering.svg"
               style="width: 10vw"
             />
-            <figcaption>Lihat Selengkapnya</figcaption>
+            <figcaption onclick="showBuahKering()">
+              Lihat Selengkapnya
+            </figcaption>
           </figure>
           <figure>
             <img
@@ -67,7 +75,7 @@
               alt="lemak.svg"
               style="width: 10vw"
             />
-            <figcaption>Lihat Selengkapnya</figcaption>
+            <figcaption onclick="showLemak()">Lihat Selengkapnya</figcaption>
           </figure>
         </div>
         <div
@@ -85,7 +93,7 @@
               alt="energi"
               style="width: 10vw"
             />
-            <figcaption>Lihat Selengkapnya</figcaption>
+            <figcaption onclick="showEnergi()">Lihat Selengkapnya</figcaption>
           </figure>
           <figure>
             <img
@@ -94,7 +102,7 @@
               alt="alkohol"
               style="width: 10vw"
             />
-            <figcaption>Lihat Selengkapnya</figcaption>
+            <figcaption onclick="showAlkohol()">Lihat Selengkapnya</figcaption>
           </figure>
           <figure>
             <img
@@ -103,7 +111,7 @@
               alt="daging"
               style="width: 10vw"
             />
-            <figcaption>Lihat Selengkapnya</figcaption>
+            <figcaption onclick="showDaging()">Lihat Selengkapnya</figcaption>
           </figure>
         </div>
 
@@ -129,11 +137,180 @@
             width: 12vw;
             --dur: 1.5s;
             --delay: 2s;
-            display: block;
+            display: none;
           "
           id="lanjut"
           ><img src="../assets/ljtBtn.svg" alt="lanjut button"
         /></a>
+        //modal collection
+        <div id="modalNasi" style="display: none" class="modal">
+          <div class="content-body" id="pageOne" style="display: block">
+            <span
+              class="close"
+              onclick="document.getElementById('modalNasi').style.display='none'"
+              >&times;</span
+            >
+
+            <h1 style="text-align: center">Makanan Tinggi Karbohidrat</h1>
+            <p>
+              Tubuh membutuhkan karbohidrat sebagai sumber energi dan nutrisi
+              lainnya. Namun, asupan nutrisi ini perlu diperhatikan sebaik
+              mungkin karena termasuk salah satu jenis makanan penyebab diabetes
+              terlebih jika dikonsumsi secara berlebihan dan tidak dibarengi
+              dengan penerapan pola hidup sehat.
+            </p>
+            <p>
+              Makanan tinggi karbohidrat, seperti pasta, roti, dan donat,
+              cenderung lebih mudah dicerna oleh tubuh sehingga dapat
+              meningkatkan kadar gula darah dalam waktu singkat.
+            </p>
+            <p>
+              Alih-alih mengonsumsi makanan tinggi karbohidrat secara
+              berlebihan, Anda dapat mencukupi kebutuhan energi tubuh dengan
+              memilih makanan yang mengandung karbohidrat kompleks dan tinggi
+              serat.
+            </p>
+            <ul style="text-align: center">
+              <li class="btn active" onclick="page1()"></li>
+              <li class="btn" onclick="page2()"></li>
+            </ul>
+          </div>
+          <div class="content-body" id="pageTwo" style="display: none">
+            <span
+              class="close"
+              onclick="document.getElementById('modalNasi').style.display='none'"
+              style="align-self: flex-end"
+              >&times;</span
+            >
+            <h1 style="text-align: center">Makanan Tinggi Karbohidrat</h1>
+            <div style="display: flex; justify-content: center">
+              <img
+                class="mySlides"
+                src="../assets/karbo/1.png"
+                style="width: 100%"
+              />
+              <img
+                class="mySlides"
+                src="../assets/karbo/2.png"
+                style="width: 100%"
+              />
+              <img
+                class="mySlides"
+                src="../assets/karbo/3.png"
+                style="width: 100%"
+              />
+            </div>
+            <ul style="text-align: center">
+              <li class="btn" onclick="page1()"></li>
+              <li class="btn active" onclick="page2()"></li>
+            </ul>
+          </div>
+        </div>
+        <div id="modalKemasan" style="display: none" class="modal">
+          <div class="content-body" id="page2_1" style="display: block">
+            <span
+              class="close"
+              onclick="document.getElementById('modalKemasan').style.display='none'"
+              >&times;</span
+            >
+
+            <h1 style="text-align: center">Cemilan Kemasan</h1>
+            <p>
+              Camilan kemasan biasanya terbuat dari bahan-bahan yang mengandung
+              karbohidrat dan gula tinggi sehingga berisiko meningkatkan kadar
+              gula darah secara signifikan.
+            </p>
+            <p>
+              Karena itu, jika Anda ingin mengganjal perut di sela-sela waktu
+              makan, ada baiknya untuk mengonsumsi camilan sehat dan bernutrisi,
+              seperti yoghurt polos, buah segar, atau kacang-kacangan.
+            </p>
+            <ul style="text-align: center">
+              <li class="btn active" onclick="page21()"></li>
+              <li class="btn" onclick="page22()"></li>
+            </ul>
+          </div>
+          <div class="content-body" id="page2_2" style="display: none">
+            <span
+              class="close"
+              onclick="document.getElementById('modalKemasan').style.display='none'"
+              style="align-self: flex-end"
+              >&times;</span
+            >
+            <h1 style="text-align: center">Cemilan Kemasan</h1>
+            <div style="display: flex; justify-content: center">
+              <img
+                class="mySlides2"
+                src="../assets/cemilan/1.png"
+                style="width: 100%"
+              />
+              <img
+                class="mySlides2"
+                src="../assets/cemilan/2.png"
+                style="width: 100%"
+              />
+            </div>
+            <ul style="text-align: center">
+              <li class="btn" onclick="page21()"></li>
+              <li class="btn active" onclick="page22()"></li>
+            </ul>
+          </div>
+        </div>
+        <div id="modalBuahKering" style="display: none" class="modal">
+          <div class="content-body" id="page3_1" style="display: block">
+            <span
+              class="close"
+              onclick="document.getElementById('modalBuahKering').style.display='none'"
+              >&times;</span
+            >
+
+            <h1 style="text-align: center">Buah Kering</h1>
+            <p>
+              Buah kering adalah jenis buah yang telah melalui proses
+              pengeringan untuk menghilangkan hampir seluruh kandungan airnya.
+            </p>
+            <p>
+              Karena telah melalui proses pengeringan, buah kering cenderung
+              memiliki kandungan gula yang lebih tinggi sehingga termasuk ke
+              dalam jenis makanan penyebab diabetes apabila dimakan secara
+              berlebihan.
+            </p>
+            <ul style="text-align: center">
+              <li class="btn active" onclick="page31()"></li>
+              <li class="btn" onclick="page32()"></li>
+            </ul>
+          </div>
+          <div class="content-body" id="page3_2" style="display: none">
+            <span
+              class="close"
+              onclick="document.getElementById('modalBuahKering').style.display='none'"
+              style="align-self: flex-end"
+              >&times;</span
+            >
+            <h1 style="text-align: center">Buah Kering</h1>
+            <div style="display: flex; justify-content: center">
+              <img
+                class="mySlides3"
+                src="../assets/buker/1.png"
+                style="width: 100%"
+              />
+              <img
+                class="mySlides3"
+                src="../assets/buker/2.png"
+                style="width: 100%"
+              />
+              <img
+                class="mySlides3"
+                src="../assets/buker/3.png"
+                style="width: 100%"
+              />
+            </div>
+            <ul style="text-align: center">
+              <li class="btn" onclick="page31()"></li>
+              <li class="btn active" onclick="page32()"></li>
+            </ul>
+          </div>
+        </div>
       </div>
       <div
         id="myModal"
@@ -154,5 +331,99 @@
         </div>
       </div>
     </div>
+    <script>
+      var myIndex = 0;
+      var myIndex2 = 0;
+      var myIndex3 = 0;
+      var myIndex4 = 0;
+      var myIndex5 = 0;
+      var myIndex6 = 0;
+      var myIndex7 = 0;
+      carousel();
+      carousel2();
+      carousel3();
+      carousel4();
+      carousel5();
+      carousel6();
+      carousel7();
+      function showNasi() {
+        document.getElementById("modalNasi").style.display = "block";
+        document.getElementById("pageOne").style.display = "block";
+        document.getElementById("pageTwo").style.display = "none";
+      }
+      function page1() {
+        document.getElementById("pageOne").style.display = "block";
+        document.getElementById("pageTwo").style.display = "none";
+      }
+      function page2() {
+        document.getElementById("pageOne").style.display = "none";
+        document.getElementById("pageTwo").style.display = "block";
+      }
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+          myIndex = 1;
+        }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+      }
+      function showKemasan() {
+        document.getElementById("modalKemasan").style.display = "block";
+        document.getElementById("page2_1").style.display = "block";
+        document.getElementById("page2_2").style.display = "none";
+      }
+      function page21() {
+        document.getElementById("page2_1").style.display = "block";
+        document.getElementById("page2_2").style.display = "none";
+      }
+      function page22() {
+        document.getElementById("page2_1").style.display = "none";
+        document.getElementById("page2_2").style.display = "block";
+      }
+      function carousel2() {
+        var i;
+        var x = document.getElementsByClassName("mySlides2");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex2++;
+        if (myIndex2 > x.length) {
+          myIndex2 = 1;
+        }
+        x[myIndex2 - 1].style.display = "block";
+        setTimeout(carousel2, 2000); // Change image every 2 seconds
+      }
+      function showBuahKering() {
+        document.getElementById("modalBuahKering").style.display = "block";
+        document.getElementById("page3_1").style.display = "block";
+        document.getElementById("page3_2").style.display = "none";
+      }
+      function page31() {
+        document.getElementById("page3_1").style.display = "block";
+        document.getElementById("page3_2").style.display = "none";
+      }
+      function page32() {
+        document.getElementById("page3_1").style.display = "none";
+        document.getElementById("page3_2").style.display = "block";
+      }
+      function carousel3() {
+        var i;
+        var x = document.getElementsByClassName("mySlides3");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex3++;
+        if (myIndex3 > x.length) {
+          myIndex3 = 1;
+        }
+        x[myIndex3 - 1].style.display = "block";
+        setTimeout(carousel3, 2000); // Change image every 2 seconds
+      }
+    </script>
   </body>
 </html>
