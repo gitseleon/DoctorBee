@@ -232,7 +232,13 @@ figcaption {
   animation: glow 1.5s linear infinite;
 }
 
-.mySlides, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7 {
+.mySlides,
+.mySlides2,
+.mySlides3,
+.mySlides4,
+.mySlides5,
+.mySlides6,
+.mySlides7 {
   max-width: 80%;
   display: none;
   margin: 10px 0px;
@@ -257,6 +263,19 @@ li {
   background-color: #183b5b;
 }
 
+.quiz-option {
+  width: 50%;
+  background-color: salmon;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 15px;
+}
+
+.slide-in {
+  animation: slide-in-fwd-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
 @keyframes tilt {
   25% {
     transform: rotate(10deg);
@@ -269,6 +288,19 @@ li {
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+@keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
   }
 }
 

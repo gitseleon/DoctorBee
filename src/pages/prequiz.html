@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Doctor Bee Demo</title>
+    <link rel="stylesheet" href="../styling.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lusitana&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div
+      class="container"
+      style="--fd: column; --jc: center; --ai: center; height: 100vh"
+    >
+      <div
+        id="wrapper"
+        class="container"
+        style="
+          --fd: column;
+          --jc: center;
+          --ai: center;
+          height: 100vh;
+          width: 100vw;
+        "
+      >
+        <img
+          src="../assets/char/senyum.svg"
+          id="senyum"
+          class="char slide-in-bottom"
+          alt="character"
+          style="
+            position: fixed;
+            bottom: 1%;
+            left: 1%;
+            --dur: 1s;
+            --delay: 0s;
+            align-self: center;
+            display: block;
+          "
+        />
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s"
+          id="1"
+          onclick="show2()"
+        >
+          <div class="talktext glow">
+            <p>Apakah kamu sudah siap untuk “menaklukkan” kuis ini?</p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 0s; display: none"
+          id="2"
+        >
+          <div class="talktext glow">
+            <p>
+              Tanpa berlama-lama lagi, yuk kita mulai! Klik ikon “lanjut” untuk
+              memulai kuis ya!
+            </p>
+          </div>
+        </div>
+        <a
+          href="../pages/quiz.html"
+          class="heartbeat"
+          style="
+            position: fixed;
+            bottom: 1%;
+            right: 1%;
+            width: 12vw;
+            --dur: 1.5s;
+            --delay: 2s;
+            display: none;
+          "
+          id="lanjut"
+          ><img src="../assets/ljtBtn.svg" alt="lanjut button"
+        /></a>
+      </div>
+      <div
+        id="myModal"
+        class="container"
+        style="
+          --jc: center;
+          --ai: center;
+          overflow: auto;
+          background-color: rgba(0, 0, 0, 0);
+        "
+      >
+        <!-- Modal content -->
+        <div class="modal-content">
+          <p>
+            Maksimalkan pengalaman mengeksplorasi newsgames "Manis Tak Seindah
+            Akhirnya" dengan memutar layar perangkat menjadi mode lanskap
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function show2() {
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "block";
+        document.getElementById("senyum").style.display = "block";
+        document.getElementById("lanjut").style.display = "block";
+      }
+    </script>
+  </body>
+</html>

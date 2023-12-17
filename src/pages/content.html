@@ -130,7 +130,7 @@
           onclick="showConclusion()"
         />
         <!-- modal collection -->
-        <div id="modalNasi" style="display: none" class="modal">
+        <div id="modalNasi" style="display: none" class="modal slide-in">
           <div class="content-body" id="pageOne" style="display: block">
             <span
               class="close"
@@ -193,7 +193,7 @@
             </ul>
           </div>
         </div>
-        <div id="modalKemasan" style="display: none" class="modal">
+        <div id="modalKemasan" style="display: none" class="modal slide-in">
           <div class="content-body" id="page2_1" style="display: block">
             <span
               class="close"
@@ -243,7 +243,7 @@
             </ul>
           </div>
         </div>
-        <div id="modalBuahKering" style="display: none" class="modal">
+        <div id="modalBuahKering" style="display: none" class="modal slide-in">
           <div class="content-body" id="page3_1" style="display: block">
             <span
               class="close"
@@ -298,7 +298,7 @@
             </ul>
           </div>
         </div>
-        <div id="modalLemak" style="display: none" class="modal">
+        <div id="modalLemak" style="display: none" class="modal slide-in">
           <div class="content-body" id="page4_1" style="display: block">
             <span
               class="close"
@@ -362,7 +362,7 @@
             </ul>
           </div>
         </div>
-        <div id="modalEnergi" style="display: none" class="modal">
+        <div id="modalEnergi" style="display: none" class="modal slide-in">
           <div class="content-body" id="page5_1" style="display: block">
             <span
               class="close"
@@ -416,7 +416,7 @@
             </ul>
           </div>
         </div>
-        <div id="modalAlkohol" style="display: none" class="modal">
+        <div id="modalAlkohol" style="display: none" class="modal slide-in">
           <div class="content-body" id="page6_1" style="display: block">
             <span
               class="close"
@@ -473,7 +473,7 @@
             </ul>
           </div>
         </div>
-        <div id="modalDaging" style="display: none" class="modal">
+        <div id="modalDaging" style="display: none" class="modal slide-in">
           <div class="content-body" id="page7_1" style="display: block">
             <span
               class="close"
@@ -532,8 +532,8 @@
             </ul>
           </div>
         </div>
-        <div id="modalConclusion" style="display: none" class="modal">
-          <div class="content-body" id="pageConclusion" style="display: block">
+        <div id="modalConclusion" style="display: none" class="modal slide-in">
+          <div class="container content-body" id="pageConclusion" style="--fd:column;--ai:flex-end">
             <span
               class="close"
               onclick="document.getElementById('modalConclusion').style.display='none'"
@@ -550,17 +550,14 @@
               menjadi pantangan bagi penderita diabetes karena dapat
               meningkatkan risiko hipertensi dan komplikasi diabetes melitus.
             </p>
-            <p>Yuk, kita lanjut ke sesi berikutnya!</p>
+            <p style="align-self: flex-start;">Yuk, kita lanjut ke sesi berikutnya!</p>
             <a
-              href="../pages/content.html"
+              href="../pages/prequiz.html"
               class="heartbeat"
               style="
-                position: fixed;
-                bottom: 1%;
-                right: 1%;
                 width: 12vw;
                 --dur: 1.5s;
-                --delay: 2s;
+                --delay: 1s;
                 display: block;
               "
               id="lanjut"
