@@ -3,6 +3,7 @@
   <head>
     <title>Doctor Bee</title>
     <link rel="stylesheet" href="../styling.css" />
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -49,7 +50,7 @@
             />
             <figcaption onclick="showNasi()">Lihat Selengkapnya</figcaption>
           </figure>
-          <figure class="heartbeat" style="--dur: 2s; --delay: 0s">
+          <figure class="heartbeat" style="--dur: 2s; --delay: 0.2s">
             <img
               src="../assets/kemasan.svg"
               id="kemasan"
@@ -58,7 +59,7 @@
             />
             <figcaption onclick="showKemasan()">Lihat Selengkapnya</figcaption>
           </figure>
-          <figure class="heartbeat" style="--dur: 2s; --delay: 0s">
+          <figure class="heartbeat" style="--dur: 2s; --delay: 0.4s">
             <img
               src="../assets/buahkering.svg"
               id="buahkering.svg"
@@ -69,7 +70,7 @@
               Lihat Selengkapnya
             </figcaption>
           </figure>
-          <figure class="heartbeat" style="--dur: 2s; --delay: 0s">
+          <figure class="heartbeat" style="--dur: 2s; --delay: 0.6s">
             <img
               src="../assets/lemak.svg"
               id="lemak.svg"
@@ -87,7 +88,7 @@
             align-items: center;
           "
         >
-          <figure class="heartbeat" style="--dur: 2s; --delay: 0s">
+          <figure class="heartbeat" style="--dur: 2s; --delay: 0.8s">
             <img
               src="../assets/energi.svg"
               id="energi"
@@ -96,7 +97,7 @@
             />
             <figcaption onclick="showEnergi()">Lihat Selengkapnya</figcaption>
           </figure>
-          <figure class="heartbeat" style="--dur: 2s; --delay: 0s">
+          <figure class="heartbeat" style="--dur: 2s; --delay: 1s">
             <img
               src="../assets/alkohol.svg"
               id="alkohol"
@@ -105,7 +106,7 @@
             />
             <figcaption onclick="showAlkohol()">Lihat Selengkapnya</figcaption>
           </figure>
-          <figure class="heartbeat" style="--dur: 2s; --delay: 0s">
+          <figure class="heartbeat" style="--dur: 2s; --delay: 1.2s">
             <img
               src="../assets/daging.svg"
               id="daging"
@@ -545,15 +546,25 @@
             <p style="align-self: flex-start">
               Yuk, kita lanjut ke sesi berikutnya!
             </p>
-            <a
-              href="../pages/prequiz.html"
-              class="heartbeat"
-              style="width: 12vw; --dur: 1.5s; --delay: 1s; display: block"
-              id="lanjut"
-              ><img src="../assets/ljtBtn.svg" alt="lanjut button"
-            /></a>
           </div>
         </div>
+
+        <a
+          href="../pages/prequiz.html"
+          class="heartbeat"
+          style="
+            position: fixed;
+            bottom: 1%;
+            right: 1%;
+            width: 12vw;
+            --dur: 1.5s;
+            --delay: 1s;
+            display: none;
+            z-index: 2;
+          "
+          id="lanjut"
+          ><img src="../assets/ljtBtn.svg" alt="lanjut button"
+        /></a>
       </div>
       <div
         id="myModal"
@@ -755,11 +766,11 @@
       }
       // bagian daging
       function showDaging() {
-        // document.getElementById("lanjut").style.display = "block";
         document.getElementById("oke").src = "../assets/char/kanan.svg";
         document.getElementById("modalDaging").style.display = "block";
         document.getElementById("page7_1").style.display = "block";
         document.getElementById("page7_2").style.display = "none";
+        document.getElementById("lanjut").style.display = "block";
       }
       function page71() {
         document.getElementById("page7_1").style.display = "block";

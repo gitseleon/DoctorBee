@@ -266,7 +266,7 @@ li {
 
 .quiz-option {
   width: 50%;
-  background-color: salmon;
+  background-color: #e68f59;
   margin: 10px;
   padding: 10px;
   border: 1px solid transparent;
@@ -385,6 +385,29 @@ li {
     transform: scale(1);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
+  }
+}
+
+.bright {
+  
+  animation: bright 2s linear forwards;
+}
+
+@keyframes bright {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75%{
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
