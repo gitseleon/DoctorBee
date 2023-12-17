@@ -37,9 +37,10 @@
             width: 100vw;
             justify-content: space-evenly;
             align-items: center;
+            margin-top: 15px;
           "
         >
-          <figure>
+          <figure class="heartbeat" style="--dur: 2s; --delay: 0s">
             <img
               src="../assets/nasi.svg"
               id="nasi"
@@ -48,7 +49,7 @@
             />
             <figcaption onclick="showNasi()">Lihat Selengkapnya</figcaption>
           </figure>
-          <figure>
+          <figure class="heartbeat" style="--dur: 2s; --delay: 0s">
             <img
               src="../assets/kemasan.svg"
               id="kemasan"
@@ -57,7 +58,7 @@
             />
             <figcaption onclick="showKemasan()">Lihat Selengkapnya</figcaption>
           </figure>
-          <figure>
+          <figure class="heartbeat" style="--dur: 2s; --delay: 0s">
             <img
               src="../assets/buahkering.svg"
               id="buahkering.svg"
@@ -68,7 +69,7 @@
               Lihat Selengkapnya
             </figcaption>
           </figure>
-          <figure>
+          <figure class="heartbeat" style="--dur: 2s; --delay: 0s">
             <img
               src="../assets/lemak.svg"
               id="lemak.svg"
@@ -86,7 +87,7 @@
             align-items: center;
           "
         >
-          <figure>
+          <figure class="heartbeat" style="--dur: 2s; --delay: 0s">
             <img
               src="../assets/energi.svg"
               id="energi"
@@ -95,7 +96,7 @@
             />
             <figcaption onclick="showEnergi()">Lihat Selengkapnya</figcaption>
           </figure>
-          <figure>
+          <figure class="heartbeat" style="--dur: 2s; --delay: 0s">
             <img
               src="../assets/alkohol.svg"
               id="alkohol"
@@ -104,7 +105,7 @@
             />
             <figcaption onclick="showAlkohol()">Lihat Selengkapnya</figcaption>
           </figure>
-          <figure>
+          <figure class="heartbeat" style="--dur: 2s; --delay: 0s">
             <img
               src="../assets/daging.svg"
               id="daging"
@@ -126,23 +127,9 @@
             width: 15vw;
             margin-bottom: -63vh;
           "
+          onclick="showConclusion()"
         />
-        <a
-          href="../pages/content.html"
-          class="heartbeat"
-          style="
-            position: fixed;
-            bottom: 1%;
-            right: 1%;
-            width: 12vw;
-            --dur: 1.5s;
-            --delay: 2s;
-            display: none;
-          "
-          id="lanjut"
-          ><img src="../assets/ljtBtn.svg" alt="lanjut button"
-        /></a>
-        //modal collection
+        <!-- modal collection -->
         <div id="modalNasi" style="display: none" class="modal">
           <div class="content-body" id="pageOne" style="display: block">
             <span
@@ -311,6 +298,276 @@
             </ul>
           </div>
         </div>
+        <div id="modalLemak" style="display: none" class="modal">
+          <div class="content-body" id="page4_1" style="display: block">
+            <span
+              class="close"
+              onclick="document.getElementById('modalLemak').style.display='none'"
+              >&times;</span
+            >
+
+            <h1 style="text-align: center">
+              Makanan dengan Lemak Trans dan Lemak Jenuh Tinggi
+            </h1>
+            <p>
+              Makanan tinggi lemak, terutama lemak trans dan lemak jenuh, juga
+              termasuk ke dalam daftar makanan yang perlu dibatasi konsumsinya.
+            </p>
+            <p>
+              Pasalnya makanan tersebut dapat meningkatkan kadar kolesterol
+              dalam darah yang menjadi faktor risiko obesitas, sehingga dapat
+              memicu resistensi insulin dan meningkatkan kemungkinan penyakit
+              diabetes melitus.
+            </p>
+            <p>
+              Adapun beberapa jenis makanan tinggi lemak tersebut di antaranya
+              minyak kelapa sawit, makanan cepat saji, mentega, gorengan,
+              jeroan, dan mayones.
+            </p>
+            <ul style="text-align: center">
+              <li class="btn active" onclick="page41()"></li>
+              <li class="btn" onclick="page42()"></li>
+            </ul>
+          </div>
+          <div class="content-body" id="page4_2" style="display: none">
+            <span
+              class="close"
+              onclick="document.getElementById('modalLemak').style.display='none'"
+              style="align-self: flex-end"
+              >&times;</span
+            >
+            <h1 style="text-align: center">
+              Makanan dengan Lemak Trans dan Lemak Jenuh Tinggi
+            </h1>
+            <div style="display: flex; justify-content: center">
+              <img
+                class="mySlides4"
+                src="../assets/lemak/1.jpg"
+                style="width: 100%"
+              />
+              <img
+                class="mySlides4"
+                src="../assets/lemak/2.jpg"
+                style="width: 100%"
+              />
+              <img
+                class="mySlides4"
+                src="../assets/lemak/3.jpg"
+                style="width: 100%"
+              />
+            </div>
+            <ul style="text-align: center">
+              <li class="btn" onclick="page41()"></li>
+              <li class="btn active" onclick="page42()"></li>
+            </ul>
+          </div>
+        </div>
+        <div id="modalEnergi" style="display: none" class="modal">
+          <div class="content-body" id="page5_1" style="display: block">
+            <span
+              class="close"
+              onclick="document.getElementById('modalEnergi').style.display='none'"
+              >&times;</span
+            >
+
+            <h1 style="text-align: center">Minuman Berenergi</h1>
+            <p>
+              Kandungan kafein dan karbohidrat yang tinggi di dalam minuman
+              berenergi diketahui dapat meningkatkan kadar gula darah hingga
+              menyebabkan resistensi hormon insulin.
+            </p>
+            <p>
+              Bila terjadi secara terus-menerus, kondisi ini berisiko memicu
+              terjadinya penyakit diabetes.
+            </p>
+            <ul style="text-align: center">
+              <li class="btn active" onclick="page51()"></li>
+              <li class="btn" onclick="page52()"></li>
+            </ul>
+          </div>
+          <div class="content-body" id="page5_2" style="display: none">
+            <span
+              class="close"
+              onclick="document.getElementById('modalEnergi').style.display='none'"
+              style="align-self: flex-end"
+              >&times;</span
+            >
+            <h1 style="text-align: center">Minuman Berenergi</h1>
+            <div style="display: flex; justify-content: center">
+              <img
+                class="mySlides5"
+                src="../assets/energi/1.jpg"
+                style="width: 100%"
+              />
+              <img
+                class="mySlides5"
+                src="../assets/energi/2.jpg"
+                style="width: 100%"
+              />
+              <img
+                class="mySlides5"
+                src="../assets/energi/3.jpg"
+                style="width: 100%"
+              />
+            </div>
+            <ul style="text-align: center">
+              <li class="btn" onclick="page51()"></li>
+              <li class="btn active" onclick="page52()"></li>
+            </ul>
+          </div>
+        </div>
+        <div id="modalAlkohol" style="display: none" class="modal">
+          <div class="content-body" id="page6_1" style="display: block">
+            <span
+              class="close"
+              onclick="document.getElementById('modalAlkohol').style.display='none'"
+              >&times;</span
+            >
+
+            <h1 style="text-align: center">Minuman Beralkohol</h1>
+            <p>
+              Salah satu minuman penyebab diabetes yang perlu diwaspadai adalah
+              minuman beralkohol. Sebuah penelitian yang dipublikasikan dalam
+              jurnal Diabetic Medicine pada tahun 2012 menyebutkan bahwa
+              konsumsi minuman beralkohol secara berlebihan dapat meningkatkan
+              risiko penyakit diabetes pada pria.
+            </p>
+            <p>
+              Bahkan, bila dikonsumsi secara berlebihan oleh penderita diabetes,
+              minuman beralkohol dapat memicu terjadinya hiperglikemia, yaitu
+              kondisi di mana kadar gula darah dalam tubuh meningkat drastis.
+            </p>
+            <ul style="text-align: center">
+              <li class="btn active" onclick="page61()"></li>
+              <li class="btn" onclick="page62()"></li>
+            </ul>
+          </div>
+          <div class="content-body" id="page6_2" style="display: none">
+            <span
+              class="close"
+              onclick="document.getElementById('modalAlkohol').style.display='none'"
+              style="align-self: flex-end"
+              >&times;</span
+            >
+            <h1 style="text-align: center">Minuman Beralkohol</h1>
+            <div style="display: flex; justify-content: center">
+              <img
+                class="mySlides6"
+                src="../assets/alkohol/1.jpg"
+                style="width: 100%"
+              />
+              <img
+                class="mySlides6"
+                src="../assets/alkohol/2.jpg"
+                style="width: 100%"
+              />
+              <img
+                class="mySlides6"
+                src="../assets/alkohol/3.jpg"
+                style="width: 100%"
+              />
+            </div>
+            <ul style="text-align: center">
+              <li class="btn" onclick="page61()"></li>
+              <li class="btn active" onclick="page62()"></li>
+            </ul>
+          </div>
+        </div>
+        <div id="modalDaging" style="display: none" class="modal">
+          <div class="content-body" id="page7_1" style="display: block">
+            <span
+              class="close"
+              onclick="document.getElementById('modalDaging').style.display='none'"
+              >&times;</span
+            >
+
+            <h1 style="text-align: center">Daging Olahan</h1>
+            <p>
+              Makanan penyebab diabetes yang perlu dibatasi berikutnya adalah
+              daging olahan. Daging olahan, seperti sosis, daging kalengan, dan
+              nugget, memiliki kandungan lemak trans yang tinggi sehingga dapat
+              meningkatkan kadar kolesterol dan menyebabkan obesitas, kondisi
+              ini memicu terjadinya resistensi insulin. Akibatnya, kadar gula
+              darah menjadi meningkat dan berisiko menimbulkan penyakit
+              diabetes.
+            </p>
+            <p>
+              Sementara itu, kandungan natrium di dalam daging olahan juga
+              menjadi pantangan bagi penderita diabetes karena dapat
+              meningkatkan risiko hipertensi dan komplikasi diabetes melitus.
+            </p>
+            <ul style="text-align: center">
+              <li class="btn active" onclick="page71()"></li>
+              <li class="btn" onclick="page72()"></li>
+            </ul>
+          </div>
+          <div class="content-body" id="page7_2" style="display: none">
+            <span
+              class="close"
+              onclick="document.getElementById('modalDaging').style.display='none'"
+              style="align-self: flex-end"
+              >&times;</span
+            >
+            <h1 style="text-align: center">Daging Olahan</h1>
+            <div style="display: flex; justify-content: center">
+              <img
+                class="mySlides7"
+                src="../assets/daging/1.jpg"
+                style="width: 100%"
+              />
+              <img
+                class="mySlides7"
+                src="../assets/daging/2.jpg"
+                style="width: 100%"
+              />
+              <img
+                class="mySlides7"
+                src="../assets/daging/3.jpg"
+                style="width: 100%"
+              />
+            </div>
+            <ul style="text-align: center">
+              <li class="btn" onclick="page71()"></li>
+              <li class="btn active" onclick="page72()"></li>
+            </ul>
+          </div>
+        </div>
+        <div id="modalConclusion" style="display: none" class="modal">
+          <div class="content-body" id="pageConclusion" style="display: block">
+            <span
+              class="close"
+              onclick="document.getElementById('modalConclusion').style.display='none'"
+              >&times;</span
+            >
+
+            <p>
+              Nah, sekarang sudah tahu kan kalau makanan itu sangat berpengaruh
+              pada kesehatan. Kamu juga sudah tahu makanan apa saja yang menjadi
+              pemicu munculnya diabetes.
+            </p>
+            <p>
+              Sementara itu, kandungan natrium di dalam daging olahan juga
+              menjadi pantangan bagi penderita diabetes karena dapat
+              meningkatkan risiko hipertensi dan komplikasi diabetes melitus.
+            </p>
+            <p>Yuk, kita lanjut ke sesi berikutnya!</p>
+            <a
+              href="../pages/content.html"
+              class="heartbeat"
+              style="
+                position: fixed;
+                bottom: 1%;
+                right: 1%;
+                width: 12vw;
+                --dur: 1.5s;
+                --delay: 2s;
+                display: block;
+              "
+              id="lanjut"
+              ><img src="../assets/ljtBtn.svg" alt="lanjut button"
+            /></a>
+          </div>
+        </div>
       </div>
       <div
         id="myModal"
@@ -332,6 +589,7 @@
       </div>
     </div>
     <script>
+      // index collection
       var myIndex = 0;
       var myIndex2 = 0;
       var myIndex3 = 0;
@@ -339,6 +597,7 @@
       var myIndex5 = 0;
       var myIndex6 = 0;
       var myIndex7 = 0;
+      // carousel collection
       carousel();
       carousel2();
       carousel3();
@@ -346,6 +605,7 @@
       carousel5();
       carousel6();
       carousel7();
+      // bagian nasi
       function showNasi() {
         document.getElementById("modalNasi").style.display = "block";
         document.getElementById("pageOne").style.display = "block";
@@ -372,6 +632,7 @@
         x[myIndex - 1].style.display = "block";
         setTimeout(carousel, 2000); // Change image every 2 seconds
       }
+      // bagian kemasan
       function showKemasan() {
         document.getElementById("modalKemasan").style.display = "block";
         document.getElementById("page2_1").style.display = "block";
@@ -398,6 +659,7 @@
         x[myIndex2 - 1].style.display = "block";
         setTimeout(carousel2, 2000); // Change image every 2 seconds
       }
+      // bagian buah kering
       function showBuahKering() {
         document.getElementById("modalBuahKering").style.display = "block";
         document.getElementById("page3_1").style.display = "block";
@@ -423,6 +685,120 @@
         }
         x[myIndex3 - 1].style.display = "block";
         setTimeout(carousel3, 2000); // Change image every 2 seconds
+      }
+      // bagian lemak
+      function showLemak() {
+        document.getElementById("modalLemak").style.display = "block";
+        document.getElementById("page4_1").style.display = "block";
+        document.getElementById("page4_2").style.display = "none";
+      }
+      function page41() {
+        document.getElementById("page4_1").style.display = "block";
+        document.getElementById("page4_2").style.display = "none";
+      }
+      function page42() {
+        document.getElementById("page4_1").style.display = "none";
+        document.getElementById("page4_2").style.display = "block";
+      }
+      function carousel4() {
+        var i;
+        var x = document.getElementsByClassName("mySlides4");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex4++;
+        if (myIndex4 > x.length) {
+          myIndex4 = 1;
+        }
+        x[myIndex4 - 1].style.display = "block";
+        setTimeout(carousel4, 2000); // Change image every 2 seconds
+      }
+      // bagian energi
+      function showEnergi() {
+        document.getElementById("modalEnergi").style.display = "block";
+        document.getElementById("page5_1").style.display = "block";
+        document.getElementById("page5_2").style.display = "none";
+      }
+      function page51() {
+        document.getElementById("page5_1").style.display = "block";
+        document.getElementById("page5_2").style.display = "none";
+      }
+      function page52() {
+        document.getElementById("page5_1").style.display = "none";
+        document.getElementById("page5_2").style.display = "block";
+      }
+      function carousel5() {
+        var i;
+        var x = document.getElementsByClassName("mySlides5");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex5++;
+        if (myIndex5 > x.length) {
+          myIndex5 = 1;
+        }
+        x[myIndex5 - 1].style.display = "block";
+        setTimeout(carousel5, 2000); // Change image every 2 seconds
+      }
+      // bagian alkohol
+      function showAlkohol() {
+        document.getElementById("modalAlkohol").style.display = "block";
+        document.getElementById("page6_1").style.display = "block";
+        document.getElementById("page6_2").style.display = "none";
+      }
+      function page61() {
+        document.getElementById("page6_1").style.display = "block";
+        document.getElementById("page6_2").style.display = "none";
+      }
+      function page62() {
+        document.getElementById("page6_1").style.display = "none";
+        document.getElementById("page6_2").style.display = "block";
+      }
+      function carousel6() {
+        var i;
+        var x = document.getElementsByClassName("mySlides6");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex6++;
+        if (myIndex6 > x.length) {
+          myIndex6 = 1;
+        }
+        x[myIndex6 - 1].style.display = "block";
+        setTimeout(carousel6, 2000); // Change image every 2 seconds
+      }
+      // bagian daging
+      function showDaging() {
+        // document.getElementById("lanjut").style.display = "block";
+        document.getElementById("oke").src = "../assets/char/kanan.svg";
+        document.getElementById("modalDaging").style.display = "block";
+        document.getElementById("page7_1").style.display = "block";
+        document.getElementById("page7_2").style.display = "none";
+      }
+      function page71() {
+        document.getElementById("page7_1").style.display = "block";
+        document.getElementById("page7_2").style.display = "none";
+      }
+      function page72() {
+        document.getElementById("page7_1").style.display = "none";
+        document.getElementById("page7_2").style.display = "block";
+      }
+      function carousel7() {
+        var i;
+        var x = document.getElementsByClassName("mySlides7");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex7++;
+        if (myIndex7 > x.length) {
+          myIndex7 = 1;
+        }
+        x[myIndex7 - 1].style.display = "block";
+        setTimeout(carousel7, 2000); // Change image every 2 seconds
+      }
+      function showConclusion() {
+        // document.getElementById("oke").style.--dur = "2s";
+        document.getElementById("modalConclusion").style.display = "block";
       }
     </script>
   </body>

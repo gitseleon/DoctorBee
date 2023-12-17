@@ -101,6 +101,8 @@ figcaption {
   position: absolute;
   inset: 2px;
   display: none;
+  font-family: "Lusitana", serif;
+  font-weight: bold;
 }
 
 figure:hover figcaption {
@@ -230,7 +232,7 @@ figcaption {
   animation: glow 1.5s linear infinite;
 }
 
-.mySlides, .mySlides2, .mySlides3 {
+.mySlides, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7 {
   max-width: 80%;
   display: none;
   margin: 10px 0px;
