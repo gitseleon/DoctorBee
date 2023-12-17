@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Doctor Bee Demo</title>
+    <link rel="stylesheet" href="../styling.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lusitana&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+  </head>
+
+  <body>
+    <div
+      class="container"
+      style="--fd: column; --jc: center; --ai: center; height: 100vh"
+    >
+      <div
+        id="wrapper"
+        class="container"
+        style="
+          --fd: column;
+          --jc: center;
+          --ai: center;
+          height: 100vh;
+          width: 100vw;
+        "
+      >
+        <img
+          src="../assets/char/hai.svg"
+          id="hai"
+          class="char slide-in-bottom"
+          alt="character"
+          style="
+            position: fixed;
+            bottom: 1%;
+            left: 1%;
+            --dur: 1s;
+            --delay: 0s;
+            align-self: center;
+            display: block;
+          "
+        />
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s"
+          id="1"
+          onclick="show2()"
+        >
+          <div class="talktext glow">
+            <p>
+              Gimana kuisnya? Susah nggak? Atau gampang banget? Berapa soal kamu
+              jawab dengan benar? Semoga kuis tadi dapat bermanfaat untuk kamu
+              ya.
+            </p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 0s; display: none"
+          id="2"
+          onclick="show3()"
+        >
+          <div class="talktext glow">
+            <p>
+              Nah, setelah kita mengetahui makanan apa saja yang dapat memicu
+              penyakit diabetes, sekarang kita mau tahu seperti apa kasus
+              penyakit diabetes di Indonesia.
+            </p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 0s; display: none"
+          id="3"
+          onclick="showVideo()"
+        >
+          <div class="talktext glow">
+            <p>
+              Kita akan dengarkan seperti apa sih kasus nyata soal penyakit
+              diabetes di Indonesia. Kepada dokter Tolhas, dipersilakan.
+            </p>
+          </div>
+        </div>
+        <div
+          id="video"
+          style="margin: 50px auto; max-width: 70vw; display: none"
+        >
+          <video preload="auto" controls crossorigin playsinline>
+            <source
+              src="https://pixeldrain.com/api/file/GienqdA9"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+        <a
+          href="../pages/quiz.html"
+          class="heartbeat"
+          style="
+            position: fixed;
+            bottom: 1%;
+            right: 1%;
+            width: 12vw;
+            --dur: 1.5s;
+            --delay: 2s;
+            display: none;
+          "
+          id="lanjut"
+          ><img src="../assets/ljtBtn.svg" alt="lanjut button"
+        /></a>
+      </div>
+      <div
+        id="myModal"
+        class="container"
+        style="
+          --jc: center;
+          --ai: center;
+          overflow: auto;
+          background-color: rgba(0, 0, 0, 0);
+        "
+      >
+        <!-- Modal content -->
+        <div class="modal-content">
+          <p>
+            Maksimalkan pengalaman mengeksplorasi newsgames "Manis Tak Seindah
+            Akhirnya" dengan memutar layar perangkat menjadi mode lanskap
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function show2() {
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "block";
+        document.getElementById("hai").style.display = "block";
+      }
+      function show3() {
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("3").style.display = "block";
+        document.getElementById("hai").style.display = "block";
+      }
+      function showVideo() {
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("hai").style.display = "none";
+        document.getElementById("video").style.display = "block";
+      }
+      document.getElementById("video").addEventListener(
+        "ended",
+        function () {
+          document.getElementById("lanjut").style.display = "block";
+        },
+        true
+      );
+    </script>
+    <script type="text/javascript">
+      const player = new Plyr("video", { captions: { active: true } });
+
+      // Expose player so it can be used from the console
+      window.player = player;
+    </script>
+  </body>
+</html>
