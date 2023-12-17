@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Doctor Bee Demo</title>
+    <link rel="stylesheet" href="../styling.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lusitana&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body style="overflow: auto">
+    <div
+      class="container"
+      style="--fd: column; --jc: center; --ai: center; height: 100vh"
+    >
+      <div
+        id="wrapper"
+        class="container"
+        style="
+          --fd: column;
+          --jc: flex-start;
+          --ai: center;
+          height: 100vh;
+          width: 100vw;
+        "
+      >
+        <!-- modal collection -->
+        <div id="modalDiabetes" style="display: block" class="modal slide-in">
+          <div class="content-body" id="pageOne" style="display: block">
+            <h1 style="text-align: center; font-size: 2vw">
+              Diabetes Mellitus Tipe 1
+            </h1>
+            <p>
+              Diabetes diklasifikasikan menjadi empat jenis. Mungkin yang sering
+              kamu dengar hanya dua tipe saja, tapi ternyata ada empat.
+              Berdasarkan hasil wawancara dengan dokter Tolhas, diabetes tipe 1
+              adalah penyakit autoimun kronis yang terjadi ketika tubuh kurang
+              atau tidak dapat menghasilkan hormon insulin sama sekali. Padahal,
+              insulin sangat dibutuhkan untuk menjaga kadar gula darah tetap
+              normal.
+            </p>
+            <p>
+              Umumnya, diabetes tipe 1 terjadi dan ditemukan pada anak-anak,
+              remaja, atau dewasa muda, meskipun bisa terjadi pada usia berapa
+              pun. Dilansir dari Hello Sehat, diabetes tipe ini kemungkinan
+              besar disebabkan oleh sistem kekebalan tubuh yang seharusnya
+              melawan bibit penyakit malah keliru sehingga menyerang sel-sel
+              penghasil insulin di pankreas.
+            </p>
+            <p>
+              Kekeliruan sistem imun tersebut bisa dipengaruhi oleh faktor
+              genetik dan paparan virus di lingkungan. Oleh karena itu, orang
+              yang memiliki riwayat keluarga dengan jenis diabetes ini berisiko
+              tinggi terkena penyakit ini. Tidak jarang penderita diabetes tipe
+              1 memerlukan terapi insulin seumur hidup untuk mengendalikan gula
+              darahnya.
+            </p>
+            <ul style="text-align: center">
+              <li class="btn active" onclick="page1()"></li>
+              <li class="btn" onclick="page2()"></li>
+              <li class="btn" onclick="page3()"></li>
+              <li class="btn" onclick="page4()"></li>
+            </ul>
+          </div>
+          <div class="content-body" id="pageTwo" style="display: none">
+            <h1 style="text-align: center; font-size: 2vw">
+              Diabetes Mellitus Tipe 2
+            </h1>
+            <p>
+              Jenis diabetes tipe 2 lebih umum terjadi dibandingkan tipe 1.
+              Secara umum, diabetes tipe 2 dapat menyerang siapapun di semua
+              kalangan usia. Namun, diabetes tipe 2 biasanya lebih besar terjadi
+              pada orang dewasa dan lansia karena faktor gaya hidup yang tidak
+              sehat. Contohnya saja kurang aktivitas fisik dan kelebihan berat
+              badan.
+            </p>
+            <p>
+              Gaya hidup yang tidak sehat menyebabkan sel-sel tubuh kebal atau
+              kurang sensitif untuk merespons hormon insulin. Kondisi ini
+              disebut juga dengan resistensi insulin. Akibatnya, sel-sel tubuh
+              tidak dapat memproses glukosa dalam darah menjadi energi dan
+              glukosa pun akhirnya menumpuk di dalam darah.
+            </p>
+            <ul style="text-align: center">
+              <li class="btn" onclick="page1()"></li>
+              <li class="btn active" onclick="page2()"></li>
+              <li class="btn" onclick="page3()"></li>
+              <li class="btn" onclick="page4()"></li>
+            </ul>
+          </div>
+          <div class="content-body" id="pageThree" style="display: none">
+            <h1 style="text-align: center; font-size: 2vw">
+              Diabetes Mellitus Gestasional
+            </h1>
+            <p>
+              Selanjutnya, ada diabetes gestasional. Tipe diabetes ini bisa
+              menyerang ibu hamil, walau tidak memiliki riwayat diabetes.
+              Diabetes tipe ini hanya muncul pada saat kehamilan trimester kedua
+              dan ketiga. Klasifikasi diabetes ini muncul karena plasenta ibu
+              hamil akan terus menghasilkan sebuah hormon khusus.
+            </p>
+            <p>
+              Nah, hormon inilah yang menghambat insulin bekerja dengan efektif.
+              Akibatnya, kadar gula darah Anda pun menjadi tidak stabil selama
+              kehamilan. Sebagian besar wanita tidak mengetahui bahwa dirinya
+              mengalami diabetes jenis ini karena diabetes gestasional sering
+              tidak memunculkan gejala dan tanda yang spesifik.
+            </p>
+            <p>
+              Kabar baiknya, kebanyakan wanita yang mengalami jenis diabetes ini
+              akan sembuh selepas melahirkan.
+            </p>
+            <ul style="text-align: center">
+              <li class="btn" onclick="page1()"></li>
+              <li class="btn" onclick="page2()"></li>
+              <li class="btn active" onclick="page3()"></li>
+              <li class="btn" onclick="page4()"></li>
+            </ul>
+          </div>
+          <div class="content-body" id="pageFour" style="display: none">
+            <h1 style="text-align: center; font-size: 2vw">
+              Diabetes Mellitus Tipe Spesifik
+            </h1>
+            <p>
+              Terakhir, ada diabetes tipe spesifik. Maksudnya apa ya? Diabetes
+              tipe spesifik ini selalu berkaitan dengan penyebab lain atau
+              penyakit lain.
+            </p>
+            <p>
+              Sebagai contoh, orang-orang yang menggunakan steroid dalam waktu
+              yang lama juga bisa menyebabkan diabetes atau juga
+              penyakit-penyakit endokrin yang lain dikelompokkan dengan tipe
+              spesifik.
+            </p>
+            <ul style="text-align: center">
+              <li class="btn" onclick="page1()"></li>
+              <li class="btn" onclick="page2()"></li>
+              <li class="btn" onclick="page3()"></li>
+              <li class="btn active" onclick="page4()"></li>
+            </ul>
+          </div>
+        </div>
+        <a
+          href="../pages/conclusion.html"
+          class="heartbeat"
+          style="
+            position: fixed;
+            bottom: 1%;
+            right: 1%;
+            width: 12vw;
+            --dur: 1.5s;
+            --delay: 1s;
+            display: none;
+            z-index: 2;
+          "
+          id="lanjut"
+          ><img src="../assets/ljtBtn.svg" alt="lanjut button"
+        /></a>
+      </div>
+      <div
+        id="myModal"
+        class="container"
+        style="
+          --jc: center;
+          --ai: center;
+          overflow: auto;
+          background-color: rgba(0, 0, 0, 0);
+        "
+      >
+        <!-- Modal content -->
+        <div class="modal-content">
+          <p>
+            Maksimalkan pengalaman mengeksplorasi newsgames "Manis Tak Seindah
+            Akhirnya" dengan memutar layar perangkat menjadi mode lanskap
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function page1() {
+        document.getElementById("pageOne").style.display = "block";
+        document.getElementById("pageTwo").style.display = "none";
+        document.getElementById("pageThree").style.display = "none";
+        document.getElementById("pageFour").style.display = "none";
+      }
+      function page2() {
+        document.getElementById("pageOne").style.display = "none";
+        document.getElementById("pageThree").style.display = "none";
+        document.getElementById("pageTwo").style.display = "block";
+        document.getElementById("pageFour").style.display = "none";
+      }
+      function page3() {
+        document.getElementById("pageOne").style.display = "none";
+        document.getElementById("pageTwo").style.display = "none";
+        document.getElementById("pageFour").style.display = "none";
+        document.getElementById("pageThree").style.display = "block";
+      }
+      function page4() {
+        document.getElementById("pageOne").style.display = "none";
+        document.getElementById("pageTwo").style.display = "none";
+        document.getElementById("pageThree").style.display = "none";
+        document.getElementById("pageFour").style.display = "block";
+        document.getElementById("lanjut").style.display = "block";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Doctor Bee Demo</title>
+    <link rel="stylesheet" href="../styling.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lusitana&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div
+      class="container"
+      style="--fd: column; --jc: center; --ai: center; height: 100vh"
+    >
+      <div
+        id="wrapper"
+        class="container"
+        style="
+          --fd: column;
+          --jc: center;
+          --ai: center;
+          height: 100vh;
+          width: 100vw;
+        "
+      >
+        <img
+          src="../assets/char/kanan.svg"
+          id="kanan"
+          class="char slide-in-bottom"
+          alt="character"
+          style="
+            position: fixed;
+            bottom: 1%;
+            left: 1%;
+            --dur: 1s;
+            --delay: 0s;
+            align-self: center;
+            display: none;
+          "
+        />
+        <img
+          src="../assets/char/hai.svg"
+          id="hallo"
+          class="char slide-in-bottom"
+          alt="character"
+          style="
+            position: fixed;
+            bottom: 1%;
+            left: 1%;
+            --dur: 1s;
+            --delay: 0s;
+            align-self: center;
+            display: block;
+          "
+        />
+        <img
+          src="../assets/char/ide.svg"
+          id="ide"
+          class="char slide-in-bottom"
+          alt="character"
+          style="
+            position: fixed;
+            bottom: 1%;
+            left: 1%;
+            --dur: 1s;
+            --delay: 0s;
+            align-self: center;
+            display: none;
+          "
+        />
+        <img
+          src="../assets/char/oke.svg"
+          id="oke"
+          class="char slide-in-bottom"
+          alt="character"
+          style="
+            position: fixed;
+            bottom: 1%;
+            left: 1%;
+            --dur: 1s;
+            --delay: 0s;
+            align-self: center;
+            display: none;
+          "
+        />
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s"
+          id="1"
+          onclick="show2()"
+        >
+          <div class="talktext glow">
+            <p>
+              Wah, kita sudah sampai di penghujung newsgames, nih. Gimana
+              newsgamesnya? Seru atau engga?
+            </p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 0s; display: none"
+          id="2"
+          onclick="show3()"
+        >
+          <div class="talktext glow">
+            <p>
+              Sebelum kita akhiri, ada informasi tambahan dan kesimpulan dari
+              newsgames kali ini. Yuk, kita simak!
+            </p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s; display: none"
+          id="3"
+          onclick="show4()"
+        >
+          <div class="talktext glow">
+            <p>
+              Ternyata, masih ada yang belum disampaikan sama dokter Tolhas,
+              nih. Tapi, karena dokter Tolhas ada urusan lain, jadi aku aja yang
+              sampaikan, ya.
+            </p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 0s; display: none"
+          id="4"
+          onclick="show5()"
+        >
+          <div class="talktext glow">
+            <p>
+              Dokter Tolhas, sebagai seorang dokter, sebenarnya berharap
+              masyarakat mengetahui diabetes tidak hanya sebatas tentang kadar
+              gula darah yang tinggi, tetapi juga penyebab seseorang terkena
+              diabetes itu karena apa. Salah satunya adalah dengan mengenal
+              faktor risiko yang dimiliki.
+            </p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s; display: none"
+          id="5"
+          onclick="show6()"
+        >
+          <div class="talktext glow">
+            <p>
+              Orang-orang yang memiliki risiko terkena diabetes itu seperti apa
+              sih. Kemudian, misalnya untuk mendeteksi awal, sudah harus tahu
+              gejala awalnya seperti apa. Lalu, setelah seseorang itu mengetahui
+              bahwa dirinya memiliki faktor risiko dan gejalanya apa, barulah
+              bisa didiagnosa diabetes yang dimiliki seperti apa.
+            </p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s; display: none"
+          id="6"
+          onclick="show7()"
+        >
+          <div class="talktext glow">
+            <p>
+              Selanjutnya, kalau sudah terdeteksi menderita diabetes, hal yang
+              harus dilakukan bukan hanya sekadar menurunkan kadar gula darah,
+              tetapi juga harus bisa mengetahui kira-kira komplikasi yang akan
+              terjadi apa saja. Hal itu dibutuhkan supaya bisa mencegah jangan
+              sampai terjadi komplikasi dan berlanjut pada pengobatan.
+            </p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s; display: none"
+          id="7"
+          onclick="show8()"
+        >
+          <div class="talktext glow">
+            <p>Nah, segitu aja tambahannya. Sekarang, kita simpulkan, yuk</p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s; display: none"
+          id="8"
+          onclick="show9()"
+        >
+          <div class="talktext glow">
+            <p>
+              Pertama, ada 7 jenis makanan yang menjadi penyebab diabetes, apa
+              saja kah itu? Yuk, kita sebutkan satu-satu. Makanan tinggi
+              karbohidrat, camilan kemasan, buah kering, makanan dengan lemak
+              trans dan tinggi lemak jenuh, minuman berenergi, minuman
+              beralkohol, dan daging olahan.
+            </p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s; display: none"
+          id="9"
+          onclick="show10()"
+        >
+          <div class="talktext glow">
+            <p>
+              Kedua, ada empat tipe diabetes. Diabetes tipe 1, tipe 2, tipe
+              gestasional, dan tipe spesifik.
+            </p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s; display: none"
+          id="10"
+          onclick="show11()"
+        >
+          <div class="talktext glow">
+            <p>
+              Terakhir, baik untuk kamu yang sehat dan yang menderita diabetes,
+              jangan lupa untuk terus berolahraga dan rutin memeriksa kadar gula
+              darah, ya. Hal itu perlu dilakukan supaya kadar gula darah kita
+              terkontrol dengan baik. Satu lagi, jaga makanan dan minuman yang
+              dikonsumsi tiap harinya.
+            </p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s; display: none"
+          id="11"
+          onclick="show12()"
+        >
+          <div class="talktext glow">
+            <p>
+              Nah, segitu dulu untuk newsgames kali ini. Terima kasih sudah
+              mengikuti newsgames ini sampai akhir. Semoga bermanfaat, ya!.
+            </p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s; display: none"
+          id="12"
+          onclick="show13()"
+        >
+          <div class="talktext glow">
+            <p>
+              Jangan lupa bagikan newsgames ini pada teman-teman kamu ya.
+              Bagikan keseruan kamu selama bermain newsgames ini.
+            </p>
+          </div>
+        </div>
+        <div
+          class="talk-bubble tri-right round left-top fade-in-left border"
+          style="--dur: 2s; --delay: 1s; display: none"
+          id="13"
+        >
+          <div class="talktext">
+            <p>
+              Segenap tim produksi newsgames “Manis Tak Seindah Akhirnya”
+              mengucapkan terima kasih dan pamit undur diri. Sampai jumpa lagi.
+            </p>
+          </div>
+        </div>
+        <div style="position: fixed; bottom: 1%; display: none" id="list">
+          <ul>
+            <li class="btn" onclick="show1()"></li>
+            <li class="btn" onclick="show2()"></li>
+            <li class="btn" onclick="show3()"></li>
+            <li class="btn" onclick="show4()"></li>
+            <li class="btn" onclick="show5()"></li>
+            <li class="btn" onclick="show6()"></li>
+            <li class="btn" onclick="show7()"></li>
+            <li class="btn" onclick="show8()"></li>
+            <li class="btn" onclick="show9()"></li>
+            <li class="btn" onclick="show10()"></li>
+            <li class="btn" onclick="show11()"></li>
+            <li class="btn" onclick="show12()"></li>
+            <li class="btn active" onclick="show13()"></li>
+          </ul>
+        </div>
+        <a
+          href="../pages/credit.html"
+          class="heartbeat"
+          style="
+            position: fixed;
+            bottom: 1%;
+            right: 1%;
+            width: 12vw;
+            --dur: 1.5s;
+            --delay: 2s;
+            display: none;
+          "
+          id="lanjut"
+          ><img src="../assets/ljtBtn.svg" alt="lanjut button"
+        /></a>
+      </div>
+      <div
+        id="myModal"
+        class="container"
+        style="
+          --jc: center;
+          --ai: center;
+          overflow: auto;
+          background-color: rgba(0, 0, 0, 0);
+        "
+      >
+        <!-- Modal content -->
+        <div class="modal-content">
+          <p>
+            Maksimalkan pengalaman mengeksplorasi newsgames "Manis Tak Seindah
+            Akhirnya" dengan memutar layar perangkat menjadi mode lanskap
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      var header = document.getElementById("list");
+      function show1() {
+        document.getElementById("1").style.display = "block";
+        document.getElementById("oke").style.display = "none";
+        document.getElementById("lanjut").style.display = "none";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("6").style.display = "none";
+        document.getElementById("7").style.display = "none";
+        document.getElementById("8").style.display = "none";
+        document.getElementById("9").style.display = "none";
+        document.getElementById("10").style.display = "none";
+        document.getElementById("11").style.display = "none";
+        document.getElementById("12").style.display = "none";
+        document.getElementById("13").style.display = "none";
+        document.getElementById("hallo").style.display = "block";
+        document.getElementById("ide").style.display = "none";
+        document.getElementById("kanan").style.display = "none";
+      }
+      function show2() {
+        document.getElementById("2").style.display = "block";
+        document.getElementById("oke").style.display = "none";
+        document.getElementById("lanjut").style.display = "none";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("6").style.display = "none";
+        document.getElementById("7").style.display = "none";
+        document.getElementById("8").style.display = "none";
+        document.getElementById("9").style.display = "none";
+        document.getElementById("10").style.display = "none";
+        document.getElementById("11").style.display = "none";
+        document.getElementById("12").style.display = "none";
+        document.getElementById("13").style.display = "none";
+        document.getElementById("14").style.display = "none";
+        document.getElementById("hallo").style.display = "block";
+        document.getElementById("kanan").style.display = "none";
+        document.getElementById("ide").style.display = "none";
+      }
+      function show3() {
+        document.getElementById("3").style.display = "block";
+        document.getElementById("kanan").style.display = "none";
+        document.getElementById("lanjut").style.display = "none";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("6").style.display = "none";
+        document.getElementById("7").style.display = "none";
+        document.getElementById("8").style.display = "none";
+        document.getElementById("9").style.display = "none";
+        document.getElementById("10").style.display = "none";
+        document.getElementById("11").style.display = "none";
+        document.getElementById("12").style.display = "none";
+        document.getElementById("13").style.display = "none";
+        document.getElementById("hallo").style.display = "none";
+        document.getElementById("ide").style.display = "block";
+        document.getElementById("oke").style.display = "none";
+      }
+      function show4() {
+        document.getElementById("4").style.display = "block";
+        document.getElementById("kanan").style.display = "none";
+        document.getElementById("lanjut").style.display = "none";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("6").style.display = "none";
+        document.getElementById("7").style.display = "none";
+        document.getElementById("8").style.display = "none";
+        document.getElementById("9").style.display = "none";
+        document.getElementById("10").style.display = "none";
+        document.getElementById("11").style.display = "none";
+        document.getElementById("12").style.display = "none";
+        document.getElementById("13").style.display = "none";
+        document.getElementById("hallo").style.display = "none";
+        document.getElementById("ide").style.display = "block";
+        document.getElementById("oke").style.display = "none";
+      }
+      function show5() {
+        document.getElementById("5").style.display = "block";
+        document.getElementById("kanan").style.display = "none";
+        document.getElementById("lanjut").style.display = "none";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("6").style.display = "none";
+        document.getElementById("7").style.display = "none";
+        document.getElementById("8").style.display = "none";
+        document.getElementById("9").style.display = "none";
+        document.getElementById("10").style.display = "none";
+        document.getElementById("11").style.display = "none";
+        document.getElementById("12").style.display = "none";
+        document.getElementById("13").style.display = "none";
+        document.getElementById("hallo").style.display = "none";
+        document.getElementById("ide").style.display = "block";
+        document.getElementById("oke").style.display = "none";
+      }
+      function show6() {
+        document.getElementById("6").style.display = "block";
+        document.getElementById("ide").style.display = "none";
+        document.getElementById("lanjut").style.display = "none";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("7").style.display = "none";
+        document.getElementById("8").style.display = "none";
+        document.getElementById("9").style.display = "none";
+        document.getElementById("10").style.display = "none";
+        document.getElementById("11").style.display = "none";
+        document.getElementById("12").style.display = "none";
+        document.getElementById("13").style.display = "none";
+        document.getElementById("hallo").style.display = "none";
+        document.getElementById("kanan").style.display = "block";
+        document.getElementById("oke").style.display = "none";
+      }
+      function show7() {
+        document.getElementById("7").style.display = "block";
+        document.getElementById("ide").style.display = "none";
+        document.getElementById("lanjut").style.display = "none";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("6").style.display = "none";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("8").style.display = "none";
+        document.getElementById("9").style.display = "none";
+        document.getElementById("10").style.display = "none";
+        document.getElementById("11").style.display = "none";
+        document.getElementById("12").style.display = "none";
+        document.getElementById("13").style.display = "none";
+        document.getElementById("hallo").style.display = "none";
+        document.getElementById("kanan").style.display = "none";
+        document.getElementById("oke").style.display = "block";
+      }
+      function show8() {
+        document.getElementById("8").style.display = "block";
+        document.getElementById("oke").style.display = "block";
+        document.getElementById("lanjut").style.display = "none";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("6").style.display = "none";
+        document.getElementById("7").style.display = "none";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("9").style.display = "none";
+        document.getElementById("10").style.display = "none";
+        document.getElementById("11").style.display = "none";
+        document.getElementById("12").style.display = "none";
+        document.getElementById("13").style.display = "none";
+        document.getElementById("hallo").style.display = "none";
+        document.getElementById("ide").style.display = "none";
+        document.getElementById("kanan").style.display = "none";
+      }
+      function show9() {
+        document.getElementById("9").style.display = "block";
+        document.getElementById("oke").style.display = "block";
+        document.getElementById("lanjut").style.display = "none";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("6").style.display = "none";
+        document.getElementById("7").style.display = "none";
+        document.getElementById("8").style.display = "none";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("10").style.display = "none";
+        document.getElementById("11").style.display = "none";
+        document.getElementById("12").style.display = "none";
+        document.getElementById("13").style.display = "none";
+        document.getElementById("hallo").style.display = "none";
+        document.getElementById("ide").style.display = "none";
+        document.getElementById("kanan").style.display = "none";
+      }
+      function show10() {
+        document.getElementById("10").style.display = "block";
+        document.getElementById("hallo").style.display = "none";
+        document.getElementById("lanjut").style.display = "none";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("6").style.display = "none";
+        document.getElementById("7").style.display = "none";
+        document.getElementById("8").style.display = "none";
+        document.getElementById("9").style.display = "none";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("11").style.display = "none";
+        document.getElementById("12").style.display = "none";
+        document.getElementById("13").style.display = "none";
+        document.getElementById("kanan").style.display = "none";
+        document.getElementById("ide").style.display = "none";
+        document.getElementById("oke").style.display = "block";
+      }
+      function show11() {
+        document.getElementById("11").style.display = "block";
+        document.getElementById("hallo").style.display = "block";
+        document.getElementById("lanjut").style.display = "none";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("6").style.display = "none";
+        document.getElementById("7").style.display = "none";
+        document.getElementById("8").style.display = "none";
+        document.getElementById("9").style.display = "none";
+        document.getElementById("10").style.display = "none";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("12").style.display = "none";
+        document.getElementById("13").style.display = "none";
+        document.getElementById("kanan").style.display = "none";
+        document.getElementById("ide").style.display = "none";
+        document.getElementById("oke").style.display = "none";
+      }
+      function show12() {
+        document.getElementById("12").style.display = "block";
+        document.getElementById("kanan").style.display = "none";
+        document.getElementById("lanjut").style.display = "none";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("6").style.display = "none";
+        document.getElementById("7").style.display = "none";
+        document.getElementById("8").style.display = "none";
+        document.getElementById("9").style.display = "none";
+        document.getElementById("10").style.display = "none";
+        document.getElementById("11").style.display = "none";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("13").style.display = "none";
+        document.getElementById("hallo").style.display = "block";
+        document.getElementById("ide").style.display = "none";
+        document.getElementById("oke").style.display = "none";
+      }
+      function show13() {
+        document.getElementById("13").style.display = "block";
+        document.getElementById("list").style.display = "block";
+        document.getElementById("lanjut").style.display = "block";
+        document.getElementById("1").style.display = "none";
+        document.getElementById("2").style.display = "none";
+        document.getElementById("4").style.display = "none";
+        document.getElementById("5").style.display = "none";
+        document.getElementById("6").style.display = "none";
+        document.getElementById("7").style.display = "none";
+        document.getElementById("8").style.display = "none";
+        document.getElementById("9").style.display = "none";
+        document.getElementById("10").style.display = "none";
+        document.getElementById("11").style.display = "none";
+        document.getElementById("12").style.display = "none";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("hallo").style.display = "block";
+        document.getElementById("ide").style.display = "none";
+        document.getElementById("kanan").style.display = "none";
+        document.getElementById("oke").style.display = "none";
+      }
+      var btns = header.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+          var current = document.getElementsByClassName("active");
+          if (current.length > 0) {
+            current[0].className = current[0].className.replace(" active", "");
+          }
+          this.className += " active";
+        });
+      }
+    </script>
+  </body>
+</html>
