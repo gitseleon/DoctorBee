@@ -102,6 +102,7 @@ figcaption {
   inset: 2px;
   display: none;
   font-family: "Lusitana", serif;
+  font-size: 1vw;
   font-weight: bold;
 }
 
