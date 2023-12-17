@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Doctor Bee Demo</title>
+    <link rel="stylesheet" href="../styling.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lusitana&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div
+      class="container"
+      style="--fd: column; --jc: center; --ai: center; height: 100vh"
+    >
+      <div
+        id="wrapper"
+        class="container"
+        style="
+          --fd: column;
+          --jc: flex-start;
+          --ai: center;
+          height: 100vh;
+          width: 100vw;
+        "
+      >
+        <!-- modal collection -->
+        <div id="quiz1" style="display: block" class="modal slide-in">
+          <div
+            class="container content-body"
+            style="width: 95%; height: auto; --fd: column; --ai: center"
+          >
+            <h1 style="align-self: flex-start">Soal 1</h1>
+            <p style="text-align: center">
+              Berdasarkan penjelasan dari dokter Tolhas, diabetes jenis apa yang
+              paling sering dijumpai?
+            </p>
+            <div class="container" style="--fd: column; width: 100%">
+              <div class="container" style="--fd: row; width: 100%">
+                <div class="quiz-option" onclick="salah()">
+                  A.<span>&nbsp;</span>Tipe yang gak ada obatnya
+                </div>
+                <div class="quiz-option" onclick="salah()">
+                  B.<span>&nbsp;</span>Tipe yang kayak kamu
+                </div>
+              </div>
+            </div>
+            <div class="container" style="--fd: column; width: 100%">
+              <div class="container" style="--fd: row; width: 100%">
+                <div class="quiz-option" onclick="salah()">
+                  C.<span>&nbsp;</span>Tipe 1
+                </div>
+                <div class="quiz-option" onclick="benar1()">
+                  D.<span>&nbsp;</span>Tipe 2
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="quiz2" style="display: none" class="modal slide-in">
+          <div
+            class="container content-body"
+            style="width: 95%; height: auto; --fd: column; --ai: center"
+          >
+            <h1 style="align-self: flex-start">Soal 2</h1>
+
+            <p style="text-align: center">
+              Di antara pilihan jawaban, mana yang termasuk dalam 3P?
+            </p>
+            <div class="container" style="--fd: column; width: 100%">
+              <div class="container" style="--fd: row; width: 100%">
+                <div class="quiz-option" onclick="salah()">
+                  A.<span>&nbsp;</span>Polisiang
+                </div>
+                <div class="quiz-option" onclick="benar2()">
+                  B.<span>&nbsp;</span>Polifagi
+                </div>
+              </div>
+            </div>
+            <div class="container" style="--fd: column; width: 100%">
+              <div class="container" style="--fd: row; width: 100%">
+                <div class="quiz-option" onclick="salah()">
+                  C.<span>&nbsp;</span>Poli penyakit dalam
+                </div>
+                <div class="quiz-option" onclick="salah()">
+                  D.<span>&nbsp;</span>Polisi
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="quiz3" style="display: none" class="modal slide-in">
+          <div
+            class="container content-body"
+            style="width: 95%; height: auto; --fd: column; --ai: center"
+          >
+            <h1 style="align-self: flex-start">Soal 3</h1>
+
+            <p style="text-align: center">
+              Diabetes tipe berapa yang banyak terjadi pada anak-anak?
+            </p>
+            <div class="container" style="--fd: column; width: 100%">
+              <div class="container" style="--fd: row; width: 100%">
+                <div class="quiz-option" onclick="salah()">
+                  A.<span>&nbsp;</span>Tipe gestasional
+                </div>
+                <div class="quiz-option" onclick="salah()">
+                  B.<span>&nbsp;</span>Tipe yang kau mau
+                </div>
+              </div>
+            </div>
+            <div class="container" style="--fd: column; width: 100%">
+              <div class="container" style="--fd: row; width: 100%">
+                <div class="quiz-option" onclick="benar3()">
+                  C.<span>&nbsp;</span>Tipe 1
+                </div>
+                <div class="quiz-option" onclick="salah()">
+                  D.<span>&nbsp;</span>Tipe yang kumau
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="quiz4" style="display: none" class="modal slide-in">
+          <div
+            class="container content-body"
+            style="width: 95%; height: auto; --fd: column; --ai: center"
+          >
+            <h1 style="align-self: flex-start">Soal 4</h1>
+            <p style="text-align: center">Polifagi dalam 3P artinya…</p>
+            <div class="container" style="--fd: column; width: 100%">
+              <div class="container" style="--fd: row; width: 100%">
+                <div class="quiz-option" onclick="benar4()">
+                  A.<span>&nbsp;</span>Banyak makan
+                </div>
+                <div class="quiz-option" onclick="salah()">
+                  B.<span>&nbsp;</span>Banyak kencing
+                </div>
+              </div>
+            </div>
+            <div class="container" style="--fd: column; width: 100%">
+              <div class="container" style="--fd: row; width: 100%">
+                <div class="quiz-option" onclick="salah()">
+                  C.<span>&nbsp;</span>Banyak minum
+                </div>
+                <div class="quiz-option" onclick="salah()">
+                  D.<span>&nbsp;</span>Banyak gibah
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="quiz5" style="display: none" class="modal slide-in">
+          <div
+            class="container content-body"
+            style="width: 95%; height: auto; --fd: column; --ai: center"
+          >
+            <h1 style="align-self: flex-start">Soal 5</h1>
+            <div style="display: flex; justify-content: center">
+              <img
+                src="../assets/alkohol/3.jpg"
+                alt=""
+                style="max-width: 300px"
+              />
+            </div>
+
+            <p style="text-align: center">
+              Selain 3P, apa gejala awal yang timbul pada pasien diabetes?
+            </p>
+            <div class="container" style="--fd: column; width: 100%">
+              <div class="container" style="--fd: row; width: 100%">
+                <div class="quiz-option" onclick="salah()">
+                  A.<span>&nbsp;</span>Patah hati tanpa sebab
+                </div>
+                <div class="quiz-option" onclick="salah()">
+                  B.<span>&nbsp;</span>Hiperaktif tanpa sebab
+                </div>
+              </div>
+            </div>
+            <div class="container" style="--fd: column; width: 100%">
+              <div class="container" style="--fd: row; width: 100%">
+                <div class="quiz-option" onclick="benar5()">
+                  C.<span>&nbsp;</span>Berat badan turun tanpa sebab
+                </div>
+                <div class="quiz-option" onclick="salah()">
+                  D.<span>&nbsp;</span>Menangis tanpa sebab
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="salah" style="display: none" class="modal slide-in">
+          <div
+            class="container content-body"
+            style="width: 40%; height: auto; --fd: column; --ai: center"
+          >
+            <img
+              src="../assets/salah.png"
+              alt=""
+              style="top: 5%; width: 20vw"
+            />
+            <img
+              src="../assets/again.png"
+              alt=""
+              style="bottom: 10%; width: 12vw"
+              onclick="document.getElementById('salah').style.display='none'"
+            />
+          </div>
+        </div>
+        <div id="benar1" style="display: none" class="modal slide-in">
+          <div
+            class="container content-body"
+            style="width: 40%; height: auto; --fd: column; --ai: center"
+          >
+            <img
+              src="../assets/benar.png"
+              alt=""
+              style="top: 5%; width: 20vw"
+            />
+            <img
+              src="../assets/ljtBtn.svg"
+              alt=""
+              style="bottom: 5%; width: 12vw"
+              onclick="document.getElementById('quiz1').style.display='none';document.getElementById('benar1').style.display='none';document.getElementById('quiz2').style.display='block'"
+            />
+          </div>
+        </div>
+        <div id="benar2" style="display: none" class="modal slide-in">
+          <div
+            class="container content-body"
+            style="width: 40%; height: auto; --fd: column; --ai: center"
+          >
+            <img
+              src="../assets/benar.png"
+              alt=""
+              style="top: 5%; width: 20vw"
+            />
+            <img
+              src="../assets/ljtBtn.svg"
+              alt=""
+              style="bottom: 5%; width: 12vw"
+              onclick="document.getElementById('quiz2').style.display='none';document.getElementById('benar2').style.display='none';document.getElementById('quiz3').style.display='block'"
+            />
+          </div>
+        </div>
+        <div id="benar3" style="display: none" class="modal slide-in">
+          <div
+            class="container content-body"
+            style="width: 40%; height: auto; --fd: column; --ai: center"
+          >
+            <img
+              src="../assets/benar.png"
+              alt=""
+              style="top: 5%; width: 20vw"
+            />
+            <img
+              src="../assets/ljtBtn.svg"
+              alt=""
+              style="bottom: 5%; width: 12vw"
+              onclick="document.getElementById('quiz3').style.display='none';document.getElementById('benar3').style.display='none';document.getElementById('quiz4').style.display='block'"
+            />
+          </div>
+        </div>
+        <div id="benar4" style="display: none" class="modal slide-in">
+          <div
+            class="container content-body"
+            style="width: 40%; height: auto; --fd: column; --ai: center"
+          >
+            <img
+              src="../assets/benar.png"
+              alt=""
+              style="top: 5%; width: 20vw"
+            />
+            <img
+              src="../assets/ljtBtn.svg"
+              alt=""
+              style="bottom: 5%; width: 12vw"
+              onclick="document.getElementById('quiz4').style.display='none';document.getElementById('benar4').style.display='none';document.getElementById('quiz5').style.display='block'"
+            />
+          </div>
+        </div>
+        <div id="benar5" style="display: none" class="modal slide-in">
+          <div
+            class="container content-body"
+            style="width: 40%; height: auto; --fd: column; --ai: center"
+          >
+            <img src="../assets/benar.png" alt="" style="width: 20vw" />
+            <p style="text-align: center; text-indent: 0">
+              Eitss, udah selesai aja nih kuisnya. Cepat banget kamu kerjainnya,
+              nggak terasa aja ya.
+            </p>
+            <p style="text-align: center; text-indent: 0">
+              Sebelumnya, dokter Tolhas sempat menyebutkan tentang tipe satu
+              atau tipe dua. Kira-kira itu apa maksudnya ya? Yuk, kita lanjut ke
+              halaman berikutnya untuk mengetahui lebih lanjut.
+            </p>
+            <a
+              href="../pages/dmt1.html"
+              class="heartbeat"
+              style="
+                width: 12vw;
+                --dur: 1.5s;
+                --delay: 1s;
+                display: block;
+                align-self: flex-end;
+              "
+              id="lanjut"
+              ><img src="../assets/ljtBtn.svg" alt="lanjut button"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div
+        id="myModal"
+        class="container"
+        style="
+          --jc: center;
+          --ai: center;
+          overflow: auto;
+          background-color: rgba(0, 0, 0, 0);
+        "
+      >
+        <!-- Modal content -->
+        <div class="modal-content">
+          <p>
+            Maksimalkan pengalaman mengeksplorasi newsgames "Manis Tak Seindah
+            Akhirnya" dengan memutar layar perangkat menjadi mode lanskap
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function salah() {
+        document.getElementById("salah").style.display = "block";
+      }
+      function benar1() {
+        document.getElementById("benar1").style.display = "block";
+      }
+      function benar2() {
+        document.getElementById("benar2").style.display = "block";
+      }
+      function benar3() {
+        document.getElementById("benar3").style.display = "block";
+      }
+      function benar4() {
+        document.getElementById("benar4").style.display = "block";
+      }
+      function benar5() {
+        document.getElementById("benar5").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
