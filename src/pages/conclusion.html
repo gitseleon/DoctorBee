@@ -3,7 +3,7 @@
   <head>
     <title>Doctor Bee</title>
     <link rel="stylesheet" href="../styling.css" />
-    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -77,19 +77,16 @@
             </p>
           </div>
         </div>
-        <div
-          id="video"
-          style="margin: 50px auto; max-width: 70vw; display: none"
-        >
-          <video preload="auto" controls crossorigin playsinline>
-            <source
-              src="../assets/video/COMPRESSED_Studi Kasus Diabetes.mp4"
-              type="video/mp4"
-            />
-          </video>
+        <div id="contain" style="display: none">
+          <h1 style="text-align: center">Saran untuk Non Penderita Diabetes</h1>
+          <div id="video" style="margin: 50px auto; max-width: 70vw">
+            <video preload="auto" controls crossorigin playsinline>
+              <source src="../assets/video/saran1.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
         <a
-          href="../pages/addition.html"
+          href="../pages/conclusion2.html"
           class="heartbeat"
           style="
             position: fixed;
@@ -131,7 +128,7 @@
       }
       function showVideo() {
         document.getElementById("oke").style.display = "none";
-        document.getElementById("video").style.display = "block";
+        document.getElementById("contain").style.display = "block";
         document.getElementById("2").style.display = "none";
       }
       document.getElementById("video").addEventListener(
